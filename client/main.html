@@ -1,12 +1,25 @@
 <head>
-  <title>jonschwadron</title>
+  <title>jonschwadron:portfolio</title></title>
 </head>
 
 <body>
+
   <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
   {{> info}}
+
+  <script src="typed.js"></script>
+  <script>
+	document.addEventListener('DOMContentLoaded', function(){
+		Typed.new('.element', {
+		  strings: ["First sentence.", "Second sentence."],
+		  typeSpeed: 1
+		});
+	});
+  </script>
+  <div class="element">Test: </div>
+
 </body>
 
 <template name="hello">
