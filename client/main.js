@@ -4,6 +4,13 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import './main.html';
 import './typed.js';
 
+document.addEventListener('DOMContentLoaded', function(){
+	Typed.new('.element', {
+	  strings: ["First sentence.", "Second sentence."],
+	  typeSpeed: 1
+	});
+});
+
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
   this.counter = new ReactiveVar(0);
