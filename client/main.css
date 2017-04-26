@@ -1,6 +1,5 @@
 /* CSS declarations go here */
 
-
 #robot-message {
 	margin: 0 auto;
 	margin-top: 100px;
@@ -8,11 +7,15 @@
 	width: 600px;
 	padding: 12px;
 	overflow-y: scroll;
-	background-color: rgba(0,0,0,0.8);
-	border: 1px solid black;
-	-webkit-box-shadow: 11px 11px 49px -3px rgba(0,0,0,0.75);
-	-moz-box-shadow: 11px 11px 49px -3px rgba(0,0,0,0.75);
-	box-shadow: 11px 11px 49px -3px rgba(0,0,0,0.75);
+	background-color: rgba(0,0,0,0.7);
+	-webkit-box-shadow: 0px 21px 33px -14px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 21px 33px -14px rgba(0,0,0,0.75);
+	box-shadow: 0px 21px 33px -14px rgba(0,0,0,0.75);
+    animation: fade 1s linear;
+}
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
 }
 
 .darth-plagueis-story {
@@ -23,7 +26,8 @@
 }
 
 .typed-cursor {
-	font-size: 25px;
+	color: white;
+	font-size: 18px;
 	line-height: 10px;
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
