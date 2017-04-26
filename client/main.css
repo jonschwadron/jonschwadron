@@ -1,36 +1,36 @@
 /* CSS declarations go here */
 
-.element{
+.darth-plagueis-story {
 	display: inline;
 	font-size: 20px;
 	font-family: monospace;
 }
 
-.typed-cursor{
+.typed-cursor {
 	font-size: 25px;
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
-@keyframes blink{
+@keyframes blink {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
 }
-@-webkit-keyframes blink{
+@-webkit-keyframes blink {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
 }
-@-moz-keyframes blink{
+@-moz-keyframes blink {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
 }
 
-/*.typed-fade-out{
+.typed-fade-out{
     opacity: 0;
     animation: 0;
     transition: opacity .25s;
-}*/
+}
