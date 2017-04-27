@@ -8,6 +8,10 @@ li {
 	display: block;
 }
 
+.showcase-box {
+	padding: 25px;
+}
+
 #robot-message {
 	height: 128px;
 	width: 640px;
@@ -140,37 +144,3 @@ li {
   text-shadow: 0 7px 10px rgba(0, 0, 0, 0.7);
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
 }
-
-/*mouse onclick*/
-
-/*#box0:active > #pikachu,
-#box1:active > #charmander,
-#box2:active > #bulbasaur,
-#box3:active > #squirtle {
-  display: none;
-}
-
-#box0:active > #pikachu2,
-#box1:active > #charmander2,
-#box2:active > #bulbasaur2,
-#box3:active > #squirtle2 {
-  display: block;
-}
-
-#box0:active > #heart0,
-#box1:active > #heart1,
-#box2:active > #heart2,
-#box3:active > #heart3 {
-  color: rgba(255, 158, 158, 1);
-  text-shadow: 0 15px 20px rgba(0, 0, 0, 0.7);
-  transform: scale(1.1) translateY(-10px);
-  transition: all 0.1s;
-}
-
-#box0:active,
-#box1:active,
-#box2:active,
-#box3:active {
-  background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
-  transform: scale(3) translateY(15px);
-}*/
