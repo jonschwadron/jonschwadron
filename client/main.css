@@ -1,4 +1,12 @@
 /* CSS declarations go here */
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+li {
+	display: block;
+}
 
 #robot-message {
 	height: 128px;
@@ -26,7 +34,6 @@
 
 .darth-plagueis-story {
 	color: white;
-	display: inline;
 	font-size: 16px;
 	font-family: monospace;
 }
@@ -55,3 +62,115 @@
     50% { opacity:0; }
     100% { opacity:1; }
 }
+
+.pokebox {
+	margin: 0 10px 0 10px;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0);
+  display: inline-block;
+}
+
+
+/*default state*/
+#box0 { background-color: rgb(255, 229, 52);}
+#box1 { background-color: rgb(255, 82, 82);}
+#box2 { background-color: rgb(57, 221, 132);}
+#box3 { background-color: rgb(0, 171, 255);}
+
+#pikachu, #charmander, #squirtle, #bulbasaur,
+#pikachu2, #charmander2, #squirtle2, #bulbasaur2 {
+  display: none;
+  position: absolute;
+  top: 140px;
+}
+
+#charmander { width: 50px; margin: -122px 0 0 28px; }
+#squirtle { width: 50px; margin: -113px 0 0 25px; }
+#pikachu { width: 50px; margin: -113px 0 0 35px; }
+#bulbasaur { width: 50px; margin: -115px 0 0 28px; }
+#pikachu2 { width: 185px; margin: -220px 0 0 -35px; }
+#charmander2 { width: 185px; margin: -220px 0 0 -40px; }
+#bulbasaur2 { width: 185px; margin: -220px 0 0 -40px; }
+#squirtle2 { width: 185px; margin: -220px 0 0 -38px; }
+
+#heart0, #heart1, #heart2, #heart3 {
+  padding-top: 22%;
+  padding-bottom: 22%;
+  font-size: 60px;
+  content: "\f004";
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/*hover state*/
+#box0:hover > #heart0,
+#box1:hover > #heart1,
+#box2:hover > #heart2,
+#box3:hover > #heart3 {
+  text-align: center;
+  color: rgb(255, 101, 101);
+  text-shadow: 0 15px 20px rgba(0, 0, 0, 0.7);
+  transition: all 0.5s;
+  transform: translateY(-62px);
+  animation: pokeslide 0.2s;
+}
+
+@keyframes pokeslide {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+#box0:hover > #pikachu,
+#box1:hover > #charmander,
+#box2:hover > #bulbasaur,
+#box3:hover > #squirtle {
+  display: block;
+  transform: scale(1.1);
+}
+
+#box0:hover,
+#box1:hover,
+#box2:hover,
+#box3:hover {
+  transition: all .2s;
+  transform: scale(1.1);
+  color: black;
+  text-shadow: 0 7px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
+}
+
+/*mouse onclick*/
+
+/*#box0:active > #pikachu,
+#box1:active > #charmander,
+#box2:active > #bulbasaur,
+#box3:active > #squirtle {
+  display: none;
+}
+
+#box0:active > #pikachu2,
+#box1:active > #charmander2,
+#box2:active > #bulbasaur2,
+#box3:active > #squirtle2 {
+  display: block;
+}
+
+#box0:active > #heart0,
+#box1:active > #heart1,
+#box2:active > #heart2,
+#box3:active > #heart3 {
+  color: rgba(255, 158, 158, 1);
+  text-shadow: 0 15px 20px rgba(0, 0, 0, 0.7);
+  transform: scale(1.1) translateY(-10px);
+  transition: all 0.1s;
+}
+
+#box0:active,
+#box1:active,
+#box2:active,
+#box3:active {
+  background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
+  transform: scale(3) translateY(15px);
+}*/

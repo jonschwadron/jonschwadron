@@ -1,10 +1,19 @@
 <head>
-
 <title>jonschwadron</title>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
+
 <body>
 	{{> Nav}}
 </body>
+
+<template name="Nav">
+  <ul>
+    <li><a href="/">jonschwadron</a></li>
+    <li><a href="/projects">projects</a></li>
+    <li><a href="/resume">resume</a></li>
+  </ul>
+</template>
 
 <template name="home">
   <h1>jonschwadron</h1>
@@ -15,25 +24,42 @@
 
 <template name="projects">
 	<h1>projects</h1>
-	<div id="robot-message">
-  		<div class="darth-plagueis-story"></div>
-  	</div>
+	<ul>
+		<li>
+			<div class="showcase-box">
+				<h3>Pokebox</h3>
+				<div class="pokebox" id="box0">
+					<i class="fa fa-heart" id="heart0"></i>
+					<div>Pikachu.</div>
+					<img src='/images/pikachu__.gif' id="pikachu">
+				</div>
+				<div class="pokebox" id="box1">
+					<i class="fa fa-heart" id="heart1"></i>
+					<div>Charmander.</div>
+					<img src='/images/charmander__.gif' id="charmander">
+				</div>
+				<div class="pokebox" id="box2">
+					<i class="fa fa-heart" id="heart2"></i>
+					<div>Bulbasaur.</div>
+					<img src='/images/bulbasaur__.gif' id="bulbasaur">
+				</div>
+				<div class="pokebox" id="box3">
+					<i class="fa fa-heart" id="heart3"></i>
+					<div>Squirtle.</div>
+					<img src='/images/squirtle__.gif' id="squirtle">
+					<!-- <img src="{% static "personal/img/squirtle_.gif" %}" id="squirtle2"> -->
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="showcase-box">
+				<h3>The Tragedy of Darth Plagueis the Wise</h3>
+				<div id="robot-message" class="darth-plagueis-story"></div>
+			</div>
+		</li>
+	</ul>
 </template>
 
 <template name="resume">
   <h1>resume</h1>
-</template>
-
-<template name="Nav">
-  <ul>
-    <li>
-      <a href="/">jonschwadron</a>
-    </li>
-    <li>
-      <a href="/projects">projects</a>
-    </li>
-    <li>
-      <a href="/resume">resume</a>
-    </li>
-  </ul>
 </template>
