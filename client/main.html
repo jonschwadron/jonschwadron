@@ -1,9 +1,42 @@
 <head>
-  <title>jonschwadron:portfolio</title>
-</head>
 
+<title>jonschwadron</title>
+</head>
 <body>
+	{{> Nav}}
+
 	<div id="robot-message">
-		<div class="darth-plagueis-story"></div>
-	</div>
+  		<div class="darth-plagueis-story"></div>
+  	</div>
 </body>
+
+<template name="Home">
+  <h1>Home</h1>
+  <p>
+    Data Title: {{title}}
+  </p>
+</template>
+
+<template name="projects">
+	<div id="robot-message">
+  		<div class="darth-plagueis-story"></div>
+  	</div>
+</template>
+
+<template name="resume">
+  <h1>Page Two</h1>
+</template>
+
+<template name="Nav">
+  <ul>
+    <li>
+      <a href="/">jonschwadron</a>
+    </li>
+    <li>
+      <a href="/projects">projects</a>
+    </li>
+    <li>
+      <a href="/resume">resume</a>
+    </li>
+  </ul>
+</template>
