@@ -1,12 +1,10 @@
 /* CSS declarations go here */
 
 #robot-message {
-	margin: 0 auto;
-	margin-top: 100px;
-	height: 200px;
-	width: 600px;
+	height: 128px;
+	width: 640px;
 	padding: 12px;
-	overflow-y: scroll;
+	overflow-y: auto;
 	background-color: rgba(0,0,0,0.66);
 	-webkit-box-shadow: 0px 28px 33px -11px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 28px 33px -11px rgba(0,0,0,0.75);
@@ -56,10 +54,4 @@
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
-}
-
-.typed-fade-out{
-    opacity: 0;
-    animation: 0;
-    transition: opacity .25s;
 }
