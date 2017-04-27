@@ -8,6 +8,10 @@ li {
 	display: block;
 }
 
+.navbar-brand {
+	font-size: 14px;
+}
+
 .showcase-box {
 	padding: 25px;
 }

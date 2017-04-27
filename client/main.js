@@ -1,14 +1,15 @@
 import { Template } from 'meteor/templating';
 
+import '../imports/api/bootstrap.min.js';
 import '../imports/api/jquery-ui.min.js';
+import '../imports/api/typed.js';
 import '../imports/api/jquery.ui.touch-punch.min.js';
 import '../imports/ui/bootstrap.min.css';
 import '../imports/ui/jquery-ui.min.css';
-import '../imports/api/typed.js';
 import './main.html';
 
 Router.route('/', function () {
-  this.render('home', {data: {title: 'My Title'}});
+  this.render('home');
 });
 Router.route('/projects');
 Router.route('/resume');
