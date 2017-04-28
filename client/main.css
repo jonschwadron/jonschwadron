@@ -217,7 +217,7 @@ li {
 
  .timeEntryCompany:before {
    position: absolute;
-   top: 20px;
+   top: 17px;
    left: 1px;
    content: '';
    display: block;
