@@ -155,33 +155,36 @@ li {
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
 }
 
-.timeline-list {
-   position: absolute;
-   z-index: 1000;
-}
-.timeline-list li {
-   display: none;
-}
-
 #timeline li {
-	margin-left: 25px;
-	padding: 10px;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	overflow-x: hidden;
 }
 
-.entrybox {
-	width: 500px;
-	font-family: monospace;
+ .timeEntry {
+	 font-family: monospace;
+	 width: 660px;
+	 padding: 10px;
+	 float: left;
+	 margin-left: 33px;
+ }
+
+ .timeEntryLogo {
+	width: 200px;
+ 	height: auto;
+	padding: 10px;
+	float: right;
+	visibility: hidden;
+	transform: translateX(250px);
  }
 
  .timeEntryCompany {
 	 font-size: 20px;
  }
 
-#timeline li:hover {
-   transition: all .15s;
-   transform: scale(1.07) translateX(30px);
-   color: black;
-   -webkit-box-shadow: -10px 10px 15px -10px rgba(0,0,0,0.75);
-	-moz-box-shadow: -10px 10px 15px -10px rgba(0,0,0,0.75);
-	box-shadow: -10px 10px 15px -10px rgba(0,0,0,0.75);
- }
+#timeline li:hover .timeEntryLogo {
+	transition: all 0.3s;
+	visibility: visible;
+	transform: translateX(-50px);
+}
