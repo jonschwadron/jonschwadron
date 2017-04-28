@@ -87,7 +87,7 @@ if (Meteor.isClient) {
 		});
 
 		this.$('#timeEntry9').typed({
-			strings: ["Location: Goshen, NY<br>Graduated: June 2003<br>Major: Computer Programming<br>Experience/skills acquired; <br>  "],
+			strings: ["Location: Goshen, NY<br>Graduated: June 2003<br>Major: Computer Programming<br>Experience/skills acquired: Visual Basic, C++ <br>  "],
 			contentType: 'html',
 			typeSpeed: -40,
 			startDelay: 500*9,
