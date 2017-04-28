@@ -16,6 +16,48 @@ Router.route('/projects');
 Router.route('/resume');
 
 if (Meteor.isClient) {
+
+	Template.resume.onRendered(function(){
+		$("#timeline li").each(function(index) {
+		    $(this).delay(100 * index).fadeIn(500);
+		});
+
+		this.$('#timeEntry1').typed({
+			strings: ["Burlington Bytes<br>Location: Burlington, VT<br>Joined: March 2016<br>Left: September 2016<br>Position: Tech Support & Web Developer<br>Skills acquired: Wordpress, Zendesk, Git"],
+			contentType: 'html',
+			typeSpeed: -50,
+			startDelay: 750,
+			showCursor: false
+		});
+
+		this.$('#timeEntry2').typed({
+			strings: ["General Assembly<br>Location: New York, NY<br>Joined: September 2015<br>Skills Acquired: SCSS, Node.js, Express.js, Angular, MongoDB, Ruby on Rails<br>"],
+			contentType: 'html',
+			typeSpeed: -50,
+			startDelay: 750*2,
+			showCursor: false
+		});
+
+		this.$('#timeEntry3').typed({
+			strings: ["CultureIQ<br>Location: New York, NY<br>Joined: July 2015<br>Left: August 2015<br>Position: Full Stack Developer<br>Experience acquired: Django, Angular, PostgreSQL, Git"],
+			contentType: 'html',
+			typeSpeed: -50,
+			startDelay: 750*3,
+			showCursor: false
+		});
+
+		this.$('#timeEntry4').typed({
+			strings: ["Replica Labs<br>Location: Boulder, CO<br>Position: Software Engineer<br>Skill/Experience acquired: DevOps, Chef, Ansible"],
+			contentType: 'html',
+			typeSpeed: -50,
+			startDelay: 750*3,
+			showCursor: false
+		});
+
+
+
+	});
+
 	Template.projects.onRendered(function () {
 		Meteor.setInterval(function(){
 			// var elem = document.getElementById('robot-message');
