@@ -18,8 +18,8 @@ Router.route('/resume');
 if (Meteor.isClient) {
 
 	Template.resume.onRendered(function(){
-		$("#timeline li").each(function(index) {
-		    $(this).delay(500 * index).fadeIn(1500);
+		this.$('#timeline li').each(function(index) {
+		    $(this).delay(500*index).fadeIn(2000);
 		});
 
 		this.$('#timeEntry1').typed({
@@ -74,7 +74,7 @@ if (Meteor.isClient) {
 			strings: ["NTID @ Rochester Institute of Technology<br>Location: Rochester, NY<br>Graduated: 2010<br>Major: Applied Computer Technology<br>Degree: Associates of Applied Science<br>Experience/skills acquired: Logic Fundamentals, Electronics, Networking, Security, C++, Web Development"],
 			contentType: 'html',
 			typeSpeed: -40,
-			startDelay: 500*6,
+			startDelay: 500*7,
 			showCursor: false
 		});
 
@@ -82,7 +82,7 @@ if (Meteor.isClient) {
 			strings: ["Sullivan BOCES<br>Location: Liberty, NY<br>Category: Education<br>Position: Network Technician (internship)<br>Joined: May 2008<br>Left: August 2008<br>Experience/skills acquired: Desktop setup, Networked printer troubleshooting, Server configuration, Active Directory"],
 			contentType: 'html',
 			typeSpeed: -40,
-			startDelay: 500*6,
+			startDelay: 500*8,
 			showCursor: false
 		});
 
@@ -90,11 +90,9 @@ if (Meteor.isClient) {
 			strings: ["Orange-Ulster BOCES<br>Location: Goshen, NY<br>Graduated: June 2003<br>Major: Computer Programming<br>Experience/skills acquired; <br>  "],
 			contentType: 'html',
 			typeSpeed: -40,
-			startDelay: 500*6,
+			startDelay: 500*9,
 			showCursor: false
 		});
-
-
 	});
 
 	Template.projects.onRendered(function () {
