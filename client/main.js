@@ -23,7 +23,7 @@ if (Meteor.isClient) {
 		});
 
 		this.$('#timeEntry1').typed({
-			strings: ["Burlington Bytes<br>Location: Burlington, VT<br>Joined: March 2016<br>Left: September 2016<br>Position: Tech Support & Web Developer<br>Experience/skills acquired: Wordpress, Zendesk, Git"],
+			strings: ["Burlington Bytes<br>Location: Burlington, VT<br>Category: Internet Marketing<br>Joined: March 2016<br>Left: September 2016<br>Position: Tech Support & Web Developer<br>Experience/skills acquired: Wordpress, Zendesk, Git"],
 			contentType: 'html',
 			typeSpeed: -40,
 			startDelay: 500,
@@ -39,7 +39,7 @@ if (Meteor.isClient) {
 		});
 
 		this.$('#timeEntry3').typed({
-			strings: ["CultureIQ<br>Location: New York, NY<br>Joined: July 2015<br>Left: August 2015<br>Position: Full Stack Developer<br>Experience/skills: acquired: Django, Angular, PostgreSQL, Git"],
+			strings: ["CultureIQ<br>Location: New York, NY<br>Category: Data Visualizaiton<br>Joined: July 2015<br>Left: August 2015<br>Position: Full Stack Developer<br>Experience/skills: acquired: Django, Angular, PostgreSQL, Git"],
 			contentType: 'html',
 			typeSpeed: -40,
 			startDelay: 500*3,
@@ -47,7 +47,7 @@ if (Meteor.isClient) {
 		});
 
 		this.$('#timeEntry4').typed({
-			strings: ["Replica Labs<br>Location: Boulder, CO<br>Joined: October 2014<br>Left: December 2015<br>Position: Software Engineer<br>Remote: Yes<br>Experience/skills acquired: DevOps, Chef, Ansible"],
+			strings: ["Replica Labs<br>Location: Boulder, CO<br>Category: 3D Technology<br>Joined: October 2014<br>Left: December 2015<br>Position: Software Engineer<br>Remote: Yes<br>Experience/skills acquired: DevOps, Chef, Ansible"],
 			contentType: 'html',
 			typeSpeed: -40,
 			startDelay: 500*4,
@@ -63,7 +63,7 @@ if (Meteor.isClient) {
 		});
 
 		this.$('#timeEntry6').typed({
-			strings: ["Freelance IT<br>Location: Orange County, NY<br>Joined: March 2008<br>Left: August 2012<br>Work Type: Onsite & Remote<br>Experience/skills acquired: Built custom gaming PCs, CPU/GPU overclocking, repaired overheating issues, malwares removal, performance optimizations, data recovery, improved home wireless networks."],
+			strings: ["Freelance IT<br>Location: Orange County, NY<br>Category: Information Technology<br>Joined: March 2008<br>Left: August 2012<br>Work Type: Onsite & Remote<br>Experience/skills acquired: Built custom gaming PCs, CPU/GPU overclocking, repaired overheating issues, malwares removal, performance optimizations, data recovery, improved home wireless networks."],
 			contentType: 'html',
 			typeSpeed: -40,
 			startDelay: 500*6,
@@ -79,7 +79,7 @@ if (Meteor.isClient) {
 		});
 
 		this.$('#timeEntry8').typed({
-			strings: ["Sullivan BOCES<br>Location: Liberty, NY<br>Position: Network Technician<br>Joined: May 2008<br>Left: August 2008<br>Industry: Education<br>Work Type: Internship<br>Experience/skills acquired: Desktop setup, Networked printer troubleshooting, Server configuration, Active Directory"],
+			strings: ["Sullivan BOCES<br>Location: Liberty, NY<br>Category: Education<br>Position: Network Technician (internship)<br>Joined: May 2008<br>Left: August 2008<br>Experience/skills acquired: Desktop setup, Networked printer troubleshooting, Server configuration, Active Directory"],
 			contentType: 'html',
 			typeSpeed: -40,
 			startDelay: 500*6,
