@@ -19,41 +19,80 @@ if (Meteor.isClient) {
 
 	Template.resume.onRendered(function(){
 		$("#timeline li").each(function(index) {
-		    $(this).delay(100 * index).fadeIn(500);
+		    $(this).delay(500 * index).fadeIn(1500);
 		});
 
 		this.$('#timeEntry1').typed({
-			strings: ["Burlington Bytes<br>Location: Burlington, VT<br>Joined: March 2016<br>Left: September 2016<br>Position: Tech Support & Web Developer<br>Skills acquired: Wordpress, Zendesk, Git"],
+			strings: ["Burlington Bytes<br>Location: Burlington, VT<br>Joined: March 2016<br>Left: September 2016<br>Position: Tech Support & Web Developer<br>Experience/skills acquired: Wordpress, Zendesk, Git"],
 			contentType: 'html',
-			typeSpeed: -50,
-			startDelay: 750,
+			typeSpeed: -40,
+			startDelay: 500,
 			showCursor: false
 		});
 
 		this.$('#timeEntry2').typed({
-			strings: ["General Assembly<br>Location: New York, NY<br>Joined: September 2015<br>Skills Acquired: SCSS, Node.js, Express.js, Angular, MongoDB, Ruby on Rails<br>"],
+			strings: ["General Assembly<br>Location: New York, NY<br>Joined: September 2015<br>Experience/skills Acquired: SCSS, Node.js, Express.js, Angular, MongoDB, Ruby on Rails<br>"],
 			contentType: 'html',
-			typeSpeed: -50,
-			startDelay: 750*2,
+			typeSpeed: -40,
+			startDelay: 500*2,
 			showCursor: false
 		});
 
 		this.$('#timeEntry3').typed({
-			strings: ["CultureIQ<br>Location: New York, NY<br>Joined: July 2015<br>Left: August 2015<br>Position: Full Stack Developer<br>Experience acquired: Django, Angular, PostgreSQL, Git"],
+			strings: ["CultureIQ<br>Location: New York, NY<br>Joined: July 2015<br>Left: August 2015<br>Position: Full Stack Developer<br>Experience/skills: acquired: Django, Angular, PostgreSQL, Git"],
 			contentType: 'html',
-			typeSpeed: -50,
-			startDelay: 750*3,
+			typeSpeed: -40,
+			startDelay: 500*3,
 			showCursor: false
 		});
 
 		this.$('#timeEntry4').typed({
-			strings: ["Replica Labs<br>Location: Boulder, CO<br>Position: Software Engineer<br>Skill/Experience acquired: DevOps, Chef, Ansible"],
+			strings: ["Replica Labs<br>Location: Boulder, CO<br>Joined: October 2014<br>Left: December 2015<br>Position: Software Engineer<br>Remote: Yes<br>Experience/skills acquired: DevOps, Chef, Ansible"],
 			contentType: 'html',
-			typeSpeed: -50,
-			startDelay: 750*3,
+			typeSpeed: -40,
+			startDelay: 500*4,
 			showCursor: false
 		});
 
+		this.$('#timeEntry5').typed({
+			strings: ["Farmingdale State University of New York<br>Location: Farmingdale, NY<br>Graduated: September 2014<br>Major: Computer Programming & Information Systems<br>Degree: Bachelor of Science<br>Experience/skills acquired: C++, Java, Android Development"],
+			contentType: 'html',
+			typeSpeed: -40,
+			startDelay: 500*5,
+			showCursor: false
+		});
+
+		this.$('#timeEntry6').typed({
+			strings: ["Freelance IT<br>Location: Orange County, NY<br>Joined: March 2008<br>Left: August 2012<br>Work Type: Onsite & Remote<br>Experience/skills acquired: Built custom gaming PCs, CPU/GPU overclocking, repaired overheating issues, malwares removal, performance optimizations, data recovery, improved home wireless networks."],
+			contentType: 'html',
+			typeSpeed: -40,
+			startDelay: 500*6,
+			showCursor: false
+		});
+
+		this.$('#timeEntry7').typed({
+			strings: ["NTID @ Rochester Institute of Technology<br>Location: Rochester, NY<br>Graduated: 2010<br>Major: Applied Computer Technology<br>Degree: Associates of Applied Science<br>Experience/skills acquired: Logic Fundamentals, Electronics, Networking, Security, C++, Web Development"],
+			contentType: 'html',
+			typeSpeed: -40,
+			startDelay: 500*6,
+			showCursor: false
+		});
+
+		this.$('#timeEntry8').typed({
+			strings: ["Sullivan BOCES<br>Location: Liberty, NY<br>Position: Network Technician<br>Joined: May 2008<br>Left: August 2008<br>Industry: Education<br>Work Type: Internship<br>Experience/skills acquired: Desktop setup, Networked printer troubleshooting, Server configuration, Active Directory"],
+			contentType: 'html',
+			typeSpeed: -40,
+			startDelay: 500*6,
+			showCursor: false
+		});
+
+		this.$('#timeEntry9').typed({
+			strings: ["Orange-Ulster BOCES<br>Location: Goshen, NY<br>Graduated: June 2003<br>Major: Computer Programming<br>Experience/skills acquired; <br>  "],
+			contentType: 'html',
+			typeSpeed: -40,
+			startDelay: 500*6,
+			showCursor: false
+		});
 
 
 	});

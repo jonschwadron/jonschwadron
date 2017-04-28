@@ -164,13 +164,11 @@ li {
 }
 
 #timeline li {
-	margin-left: 60px;
+	margin-left: 25px;
 	padding: 10px;
-
 }
 
 .entrybox {
-	border: 1px solid black;
 	width: 500px;
 	font-family: monospace;
  }
