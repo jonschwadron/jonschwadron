@@ -215,7 +215,6 @@ li {
 
  .timeEntryCompany {
 	 font-size: 20px;
-
  }
 
  #timeline li:before {
@@ -245,8 +244,17 @@ li {
 
 /* Smartphones (landscape) ----------- */
 @media only screen
-and (min-width : 321px) {
+and (max-width : 400px) {
 /* Styles */
+.timeEntryCompany {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.timeEntry {
+	font-size: 12px;
+}
+
 #bbytes-logo,
 #ga-logo,
 #ciq-logo,
@@ -256,7 +264,7 @@ and (min-width : 321px) {
 #ritntid-logo,
 #scboces-logo,
 #ouboces-logo {
-	width: 250px;
+	width: 125px;
 	height: auto;
 	float: right;
 	transform: translateX(300px);
@@ -267,6 +275,36 @@ and (min-width : 321px) {
 @media only screen
 and (max-width : 320px) {
 /* Styles */
+}
+
+@media only screen
+and (max-device-width: 640px),
+only screen and (max-device-width: 667px),
+only screen and (max-width: 480px) {
+	.timeEntryCompany {
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+	.timeEntry {
+		font-size: 12px;
+	}
+
+	#bbytes-logo,
+	#ga-logo,
+	#ciq-logo,
+	#rlabs-logo,
+	#fdale-logo,
+	#freelance-logo,
+	#ritntid-logo,
+	#scboces-logo,
+	#ouboces-logo {
+		width: 125px;
+		height: auto;
+		float: right;
+		transform: translateX(300px);
+	}
+	}
 }
 
 /* Macbook Pro 15 Retina split screen ----------- */
