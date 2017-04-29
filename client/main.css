@@ -244,7 +244,37 @@ li {
 
 /* Smartphones (landscape) ----------- */
 @media only screen
-and (max-width : 400px) {
+and (max-width : 666px) {
+/* Styles */
+.timeEntryCompany {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.timeEntry {
+	font-size: 12px;
+}
+}
+
+#bbytes-logo,
+#ga-logo,
+#ciq-logo,
+#rlabs-logo,
+#fdale-logo,
+#freelance-logo,
+#ritntid-logo,
+#scboces-logo,
+#ouboces-logo {
+	width: 125px;
+	height: auto;
+	float: right;
+	transform: translateX(300px);
+}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 667px) {
 /* Styles */
 .timeEntryCompany {
 	font-size: 14px;
@@ -271,46 +301,20 @@ and (max-width : 400px) {
 }
 }
 
-/* Smartphones (portrait) ----------- */
-@media only screen
-and (max-width : 320px) {
-/* Styles */
-}
-
-@media only screen
-and (max-device-width: 640px),
-only screen and (max-device-width: 667px),
-only screen and (max-width: 480px) {
-	.timeEntryCompany {
-		font-size: 14px;
-		font-weight: bold;
-	}
-
-	.timeEntry {
-		font-size: 12px;
-	}
-
-	#bbytes-logo,
-	#ga-logo,
-	#ciq-logo,
-	#rlabs-logo,
-	#fdale-logo,
-	#freelance-logo,
-	#ritntid-logo,
-	#scboces-logo,
-	#ouboces-logo {
-		width: 125px;
-		height: auto;
-		float: right;
-		transform: translateX(300px);
-	}
-	}
-}
-
 /* Macbook Pro 15 Retina split screen ----------- */
 @media only screen
 and (min-width : 960px) {
 /* Styles */
+
+.timeEntryCompany {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.timeEntry {
+	font-size: 14px;
+}
+
 #bbytes-logo,
 #ga-logo,
 #ciq-logo,
