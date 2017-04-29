@@ -10,14 +10,104 @@ import '../imports/api/typed.js';
 
 
 Router.route('/', function () {
-  this.render('home');
+  this.render('resume');
 });
 Router.route('/projects');
-Router.route('/resume');
 
 if (Meteor.isClient) {
 
 	Template.resume.onRendered(function(){
+
+		this.$('#bbytes').hover(function() {
+			$('#bbytes-logo').css('transition', 'all 0.5s');
+			$('#bbytes-logo').css('visibility', 'visible');
+			$('#bbytes-logo').css('transform', 'translateX(0px)');
+		}, function() {
+			// on mouseout, reset the background colour
+			$('#bbytes-logo').css('visibility', '');
+			$('#bbytes-logo').css('transform', '');
+		});
+
+		this.$('#ga').hover(function() {
+			$('#ga-logo').css('transition', 'all 0.5s');
+			$('#ga-logo').css('visibility', 'visible');
+			$('#ga-logo').css('transform', 'translateX(0px)');
+		}, function() {
+			// on mouseout, reset the background colour
+			$('#ga-logo').css('visibility', '');
+			$('#ga-logo').css('transform', '');
+		});
+
+		this.$('#ciq').hover(function() {
+			$('#ciq-logo').css('transition', 'all 0.5s');
+			$('#ciq-logo').css('visibility', 'visible');
+			$('#ciq-logo').css('transform', 'translateX(0px)');
+		}, function() {
+			// on mouseout, reset the background colour
+			$('#ciq-logo').css('visibility', '');
+			$('#ciq-logo').css('transform', '');
+		});
+
+		this.$('#rlabs').hover(function() {
+			$('#rlabs-logo').css('transition', 'all 0.5s');
+			$('#rlabs-logo').css('visibility', 'visible');
+			$('#rlabs-logo').css('transform', 'translateX(0px)');
+		}, function() {
+			// on mouseout, reset the background colour
+			$('#rlabs-logo').css('visibility', '');
+			$('#rlabs-logo').css('transform', '');
+		});
+
+		this.$('#fdale').hover(function() {
+			$('#fdale-logo').css('transition', 'all 0.5s');
+			$('#fdale-logo').css('visibility', 'visible');
+			$('#fdale-logo').css('transform', 'translateX(0px)');
+		}, function() {
+			// on mouseout, reset the background colour
+			$('#fdale-logo').css('visibility', '');
+			$('#fdale-logo').css('transform', '');
+		});
+
+		this.$('#freelance').hover(function() {
+			$('#freelance-logo').css('transition', 'all 0.5s');
+			$('#freelance-logo').css('visibility', 'visible');
+			$('#freelance-logo').css('transform', 'translateX(0px)');
+		}, function() {
+			// on mouseout, reset the background colour
+			$('#freelance-logo').css('visibility', '');
+			$('#freelance-logo').css('transform', '');
+		});
+
+		this.$('#ritntid').hover(function() {
+			$('#ritntid-logo').css('transition', 'all 0.5s');
+			$('#ritntid-logo').css('visibility', 'visible');
+			$('#ritntid-logo').css('transform', 'translateX(0px)');
+		}, function() {
+			// on mouseout, reset the background colour
+			$('#ritntid-logo').css('visibility', '');
+			$('#ritntid-logo').css('transform', '');
+		});
+
+		this.$('#scboces').hover(function() {
+			$('#scboces-logo').css('transition', 'all 0.5s');
+			$('#scboces-logo').css('visibility', 'visible');
+			$('#scboces-logo').css('transform', 'translateX(0px)');
+		}, function() {
+			// on mouseout, reset the background colour
+			$('#scboces-logo').css('visibility', '');
+			$('#scboces-logo').css('transform', '');
+		});
+
+		this.$('#ouboces').hover(function() {
+			$('#ouboces-logo').css('transition', 'all 0.5s');
+			$('#ouboces-logo').css('visibility', 'visible');
+			$('#ouboces-logo').css('transform', 'translateX(0px)');
+		}, function() {
+			// on mouseout, reset the background colour
+			$('#ouboces-logo').css('visibility', '');
+			$('#ouboces-logo').css('transform', '');
+		});
+
 		this.$('#timeline li').each(function(index) {
 		    $(this).delay(500*index).fadeIn(2000);
 		});

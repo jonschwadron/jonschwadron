@@ -1,3 +1,9 @@
+/* Boostrap configuration and custom classes*/
+
+.maxWidth {
+       max-width:1170px;
+}
+
 /* CSS declarations go here */
 ul {
 	list-style-type: none;
@@ -14,12 +20,6 @@ li {
 
 .showcase-box {
 	padding: 25px;
-}
-
-.col-centered {
-	float: none;
-    margin: 0 auto;
-	width: 660px;
 }
 
 #robot-message {
@@ -157,11 +157,10 @@ li {
 
 #timeline:before {
   position: absolute;
-  left: 35px;
-  top: 60px;
+  left: 22px;
   content: '';
-  width: 3px;
-  height: 1575px;
+  width: 2px;
+  height: 2260px;
   background: rgb(80,80,80);
   background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
@@ -180,9 +179,12 @@ li {
 
 
 #timeline {
-	margin-left: 45px;
-	margin-top: 50px;
 	z-index: 5;
+}
+
+#timelineLogo li,
+#timeline li {
+	height: 266px;
 }
 
 #timeline li {
@@ -193,16 +195,17 @@ li {
 	overflow-x: hidden;
 }
 
+.timeBox {
+	float: left;
+	margin-left: 40px;
+	padding: 10px;
+}
  .timeEntry {
 	 font-family: monospace;
-	 width: 660px;
-	 padding: 10px;
-	 float: left;
-	 margin-left: 33px;
  }
 
  .timeEntryLogo {
-	width: 200px;
+	width: 220px;
  	height: auto;
 	padding: 10px;
 	float: right;
@@ -212,21 +215,21 @@ li {
 
  .timeEntryCompany {
 	 font-size: 20px;
-	 margin-left: 33px;
+
  }
 
- .timeEntryCompany:before {
+ #timeline li:before {
    position: absolute;
-   top: 17px;
-   left: 1px;
+   top: 70px;
+   left: 2px;
    content: '';
    display: block;
    width: 12px;
    height: 12px;
    margin-top: -10px;
-   background: #fff;
+   background: red;
    border-radius: 10px;
-   border: 3px solid rgb(255,80,80);
+   border: 2px solid black;
    z-index: 10;
  }
 
@@ -234,4 +237,141 @@ li {
 	transition: all 0.3s;
 	visibility: visible;
 	transform: translateX(-50px);
+}
+
+
+
+/* Media Queries */
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+#bbytes-logo,
+#ga-logo,
+#ciq-logo,
+#rlabs-logo,
+#fdale-logo,
+#freelance-logo,
+#ritntid-logo,
+#scboces-logo,
+#ouboces-logo {
+	width: 250px;
+	height: auto;
+	float: right;
+	transform: translateX(300px);
+}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* Macbook Pro 15 Retina split screen ----------- */
+@media only screen
+and (min-width : 960px) {
+/* Styles */
+#bbytes-logo,
+#ga-logo,
+#ciq-logo,
+#rlabs-logo,
+#fdale-logo,
+#freelance-logo,
+#ritntid-logo,
+#scboces-logo,
+#ouboces-logo {
+	width: 200px;
+	height: auto;
+	float: right;
+	transform: translateX(260px);
+}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+#bbytes-logo,
+#ga-logo,
+#ciq-logo,
+#rlabs-logo,
+#fdale-logo,
+#freelance-logo,
+#ritntid-logo,
+#scboces-logo,
+#ouboces-logo {
+	width: 250px;
+	height: auto;
+	float: right;
+	transform: translateX(425px);
+}
+}
+
+/* Macbook Pro 15 Retina 1440p ----------- */
+@media only screen
+and (min-width : 1440px) {
+/* Styles */
+#bbytes-logo,
+#ga-logo,
+#ciq-logo,
+#rlabs-logo,
+#fdale-logo,
+#freelance-logo,
+#ritntid-logo,
+#scboces-logo,
+#ouboces-logo {
+	width: 250px;
+	height: auto;
+	float: right;
+	transform: translateX(525px);
+}
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+#bbytes-logo,
+#ga-logo,
+#ciq-logo,
+#rlabs-logo,
+#fdale-logo,
+#freelance-logo,
+#ritntid-logo,
+#scboces-logo,
+#ouboces-logo {
+		width: 300px;
+		height: auto;
+		float: right;
+		transform: translateX(750px);
+	}
+}
+
+/* Macbook Pro 15 Retina full screen ----------- */
+@media only screen
+and (min-width : 1920px) {
+/* Styles */
+#bbytes-logo,
+#ga-logo,
+#ciq-logo,
+#rlabs-logo,
+#fdale-logo,
+#freelance-logo,
+#ritntid-logo,
+#scboces-logo,
+#ouboces-logo {
+	width: 250px;
+	height: auto;
+	float: right;
+	transform: translateX(825px);
+}
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
 }
