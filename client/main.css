@@ -207,6 +207,7 @@ li {
 	margin-left: 40px;
 	padding: 20px;
 	width: 600px;
+	transition: all 0.2s;
 }
  .timeEntry {
 	 font-family: monospace;
