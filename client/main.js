@@ -14,6 +14,18 @@ Router.route('/', function () {
 });
 Router.route('/work');
 
+Router.route('/darth-plagueis', function () {
+  this.render('DarthPlagueis');
+});
+
+Router.route('/pokebox-css', function () {
+  this.render('PokeboxCSS');
+});
+
+Router.route('/happiness-calculator', function () {
+  this.render('HappinessCalculator');
+});
+
 if (Meteor.isClient) {
 
 	Template.Main.onRendered(function(){
@@ -185,10 +197,10 @@ if (Meteor.isClient) {
 		});
 	});
 
-	Template.Work.onRendered(function () {
+	Template.DarthPlagueis.onRendered(function () {
 		Meteor.setInterval(function(){
 			// var elem = document.getElementById('robot-message');
-		    // elem.scrollTop = elem.scrollHeight;
+			// elem.scrollTop = elem.scrollHeight;
 			var messageWindow = this.$('#robot-message');
 			var scrollHeight = messageWindow.prop('scrollHeight');
 			messageWindow.stop().animate({scrollTop: scrollHeight}, 550);
@@ -200,7 +212,13 @@ if (Meteor.isClient) {
 			startDelay: 2000,
 			showCursor: false
 		});
+	});
 
+	Template.Work.onRendered(function () {
+
+	});
+	
+	Template.HappinessCalculator.onRendered(function () {
 		$( "#slider-salary" ).slider({
 			value: 50000,
 			// range: true,
@@ -270,6 +288,5 @@ if (Meteor.isClient) {
 			$("#user-tax").val($taxBracket + "%");
 			$("#total").val("$" + $maxTotal + " to $" + $minTotal);
 		}
-
 	});
 }

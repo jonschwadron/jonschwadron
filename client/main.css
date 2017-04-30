@@ -278,7 +278,6 @@ li {
 	transition: all 0.4s;
 	transform-origin: left;
 	transform: perspective(300px) rotateY(7deg);
-	border: 1px solid;
 	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -399,7 +398,6 @@ and (min-width : 960px) {
 	transition: all 0.4s;
 	transform-origin: left;
 	transform: perspective(300px) rotateY(7deg);
-	border: 1px solid;
 	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 }
