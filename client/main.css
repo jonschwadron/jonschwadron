@@ -287,10 +287,21 @@ and (min-width : 400px) {
 	height: 280px;
 }
 
+.timeBox {
+	width: 100%;
+}
+
+.timeBox:hover {
+	transition: none;
+	transform: none;
+	border: none;
+	box-shadow: none;
+}
+
 }
 
 
-/* Smartphones (landscape) ----------- */
+/* Smartphones ----------- */
 @media only screen
 and (min-width : 667px) {
 /* Styles */
@@ -359,6 +370,14 @@ and (min-width : 960px) {
 	height: auto;
 	float: right;
 	transform: translateX(320px);
+}
+
+.timeBox:hover {
+	transition: all 0.4s;
+	transform-origin: left;
+	transform: perspective(300px) rotateY(7deg);
+	border: 1px solid;
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 }
 
