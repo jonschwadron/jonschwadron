@@ -109,78 +109,78 @@ if (Meteor.isClient) {
 		});
 
 		this.$('#timeline li').each(function(index) {
-		    $(this).delay(500*index).fadeIn(2000);
+		    $(this).delay(300*index).fadeIn(1000);
 		});
 
 		this.$('#timeEntry1').typed({
-			strings: ["Location: Burlington, VT<br>Category: Internet Marketing<br>Joined: March 2016<br>Left: September 2016<br>Position: Tech Support & Web Developer<br>Experience/skills acquired: Wordpress, Zendesk, Git"],
+			strings: ["Burlington, VT<br>Category: Internet Marketing<br>Joined: March 2016<br>Left: September 2016<br>Position: Tech Support &amp; Web Developer<br>Experience/skills acquired: Wordpress, Zendesk, Git"],
 			contentType: 'html',
-			typeSpeed: -40,
-			startDelay: 500,
+			typeSpeed: -25,
+			startDelay: 750,
 			showCursor: false
 		});
 
 		this.$('#timeEntry2').typed({
-			strings: ["Location: New York, NY<br>Joined: September 2015<br>Cohort: Web Development Immersive<br>Experience/skills acquired: SCSS, Node.js, Express.js, Angular, MongoDB, Ruby on Rails<br>"],
+			strings: ["New York, NY<br>Joined: September 2015<br>Cohort: Web Development Immersive<br>Experience/skills acquired: SCSS, Node.js, Express.js, Angular, MongoDB, Ruby on Rails<br>"],
 			contentType: 'html',
-			typeSpeed: -40,
-			startDelay: 500*2,
+			typeSpeed: -25,
+			startDelay: 750*2,
 			showCursor: false
 		});
 
 		this.$('#timeEntry3').typed({
-			strings: ["Location: New York, NY<br>Category: Data Visualizaiton<br>Joined: July 2015<br>Left: August 2015<br>Position: Full Stack Developer<br>Experience/skills: acquired: Django, Angular, PostgreSQL, Git"],
+			strings: ["New York, NY<br>Category: Data Visualizaiton<br>Joined: July 2015<br>Left: August 2015<br>Position: Full Stack Developer<br>Experience/skills: acquired: Django, Angular, PostgreSQL, Git"],
 			contentType: 'html',
-			typeSpeed: -40,
-			startDelay: 500*3,
+			typeSpeed: -25,
+			startDelay: 750*3,
 			showCursor: false
 		});
 
 		this.$('#timeEntry4').typed({
-			strings: ["Location: Boulder, CO<br>Category: 3D Technology<br>Joined: October 2014<br>Left: December 2015<br>Position: Software Engineer<br>Remote: Yes<br>Experience/skills acquired: DevOps, Chef, Ansible"],
+			strings: ["Boulder, CO<br>Category: 3D Technology<br>Joined: October 2014<br>Left: December 2015<br>Position: Software Engineer<br>Remote: Yes<br>Experience/skills acquired: DevOps, Chef, Ansible"],
 			contentType: 'html',
-			typeSpeed: -40,
-			startDelay: 500*4,
+			typeSpeed: -25,
+			startDelay: 750*4,
 			showCursor: false
 		});
 
 		this.$('#timeEntry5').typed({
-			strings: ["Location: Farmingdale, NY<br>Graduated: September 2014<br>Major: Computer Programming & Information Systems<br>Degree: Bachelor of Science<br>Experience/skills acquired: C++, Java, Android Development"],
+			strings: ["Farmingdale, NY<br>Graduated: September 2014<br>Major: Computer Programming &amp; Information Systems<br>Degree: Bachelor of Science<br>Experience/skills acquired: C++, Java, Android Development"],
 			contentType: 'html',
-			typeSpeed: -40,
-			startDelay: 500*5,
+			typeSpeed: -25,
+			startDelay: 750*5,
 			showCursor: false
 		});
 
 		this.$('#timeEntry6').typed({
-			strings: ["Location: Orange County, NY<br>Category: Information Technology<br>Joined: March 2008<br>Left: August 2012<br>Work Type: Onsite & Remote<br>Experience/skills acquired: Built custom gaming PCs, CPU/GPU overclocking, repaired overheating issues, malwares removal, performance optimizations, data recovery, improved home wireless networks."],
+			strings: ["Orange County, NY<br>Category: Information Technology<br>Joined: March 2008<br>Left: August 2012<br>Experience/skills acquired: Built custom gaming PCs, CPU/GPU overclocking, repaired overheating issues, malwares removal, performance optimizations, data recovery, improved home wireless networks."],
 			contentType: 'html',
-			typeSpeed: -40,
-			startDelay: 500*6,
+			typeSpeed: -25,
+			startDelay: 750*6,
 			showCursor: false
 		});
 
 		this.$('#timeEntry7').typed({
-			strings: ["Location: Rochester, NY<br>Graduated: 2010<br>Major: Applied Computer Technology<br>Degree: Associates of Applied Science<br>Experience/skills acquired: Logic Fundamentals, Electronics, Networking, Security, C++, Web Development"],
+			strings: ["Rochester, NY<br>Graduated: 2010<br>Major: Applied Computer Technology<br>Degree: Associates of Applied Science<br>Experience/skills acquired: Logic Fundamentals, Electronics, Networking, Security, C++, Web Development"],
 			contentType: 'html',
-			typeSpeed: -40,
-			startDelay: 500*7,
+			typeSpeed: -25,
+			startDelay: 750*7,
 			showCursor: false
 		});
 
 		this.$('#timeEntry8').typed({
-			strings: ["Location: Liberty, NY<br>Category: Education<br>Position: Network Technician (internship)<br>Joined: May 2008<br>Left: August 2008<br>Experience/skills acquired: Desktop setup, Networked printer troubleshooting, Server configuration, Active Directory"],
+			strings: ["Liberty, NY<br>Category: Education<br>Position: Network Technician (internship)<br>Joined: May 2008<br>Left: August 2008<br>Experience/skills acquired: Desktop setup, Networked printer troubleshooting, Server configuration, Active Directory"],
 			contentType: 'html',
-			typeSpeed: -40,
-			startDelay: 500*8,
+			typeSpeed: -25,
+			startDelay: 750*8,
 			showCursor: false
 		});
 
 		this.$('#timeEntry9').typed({
-			strings: ["Location: Goshen, NY<br>Graduated: June 2003<br>Major: Computer Programming<br>Experience/skills acquired: Visual Basic, C++ <br>  "],
+			strings: ["Goshen, NY<br>Graduated: June 2003<br>Major: Computer Programming<br>Experience/skills acquired: Visual Basic, C++ <br>  "],
 			contentType: 'html',
-			typeSpeed: -40,
-			startDelay: 500*9,
+			typeSpeed: -25,
+			startDelay: 750*9,
 			showCursor: false
 		});
 	});

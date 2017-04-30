@@ -158,9 +158,10 @@ li {
 #timeline:before {
   position: absolute;
   left: 22px;
+  top: -55px;
   content: '';
   width: 2px;
-  height: 2260px;
+  height: 2300px;
   background: rgb(80,80,80);
   background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
@@ -178,13 +179,19 @@ li {
 }
 
 
-#timeline {
+#timeline,
+#timelineLogo {
 	z-index: 5;
+	margin-top: 85px;
 }
 
-#timelineLogo li,
-#timeline li {
-	height: 266px;
+#timeline li,
+#timelineLogo li {
+	height: 250px;
+}
+
+#timelineLogo li {
+	padding-top: 15px;
 }
 
 #timeline li {
@@ -192,13 +199,14 @@ li {
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
-	overflow-x: hidden;
+	overflow: visible;
 }
 
 .timeBox {
 	float: left;
 	margin-left: 40px;
-	padding: 10px;
+	padding: 20px;
+	width: 600px;
 }
  .timeEntry {
 	 font-family: monospace;
@@ -214,22 +222,27 @@ li {
  }
 
  .timeEntryCompany {
-	 font-size: 20px;
+	 font-size: 18px;
  }
 
  #timeline li:before {
    position: absolute;
-   top: 28px;
+   top: 36px;
    left: 2px;
    content: '';
    display: block;
    width: 12px;
    height: 12px;
    margin-top: -10px;
-   background: red;
+   background: white;
    border-radius: 10px;
-   border: 2px solid black;
+   border: 1px solid black;
    z-index: 10;
+ }
+
+ #timeline li:hover::before {
+	 background-color: black;
+	 transition: all 0.8s;
  }
 
 #timeline li:hover .timeEntryLogo {
@@ -238,13 +251,19 @@ li {
 	transform: translateX(-50px);
 }
 
+.timeBox:hover {
+	transition: all 0.4s;
+	transform-origin: left;
+	transform: perspective(300px) rotateY(7deg);
+	border: 1px solid;
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
 
 
 /* Media Queries */
-
 /* Smartphones (landscape) ----------- */
 @media only screen
-and (max-width : 666px) {
+and (min-width : 400px) {
 /* Styles */
 .timeEntryCompany {
 	font-size: 14px;
@@ -254,51 +273,36 @@ and (max-width : 666px) {
 .timeEntry {
 	font-size: 12px;
 }
+
+#timelineLogo {
+	display: none;
 }
 
-#bbytes-logo,
-#ga-logo,
-#ciq-logo,
-#rlabs-logo,
-#fdale-logo,
-#freelance-logo,
-#ritntid-logo,
-#scboces-logo,
-#ouboces-logo {
-	width: 125px;
-	height: auto;
-	float: right;
-	transform: translateX(300px);
+#timeline:before {
+	height: 2415px;
 }
+
+#timeline li,
+#timelineLogo li {
+	height: 280px;
 }
+
+}
+
 
 /* Smartphones (landscape) ----------- */
 @media only screen
 and (min-width : 667px) {
 /* Styles */
-.timeEntryCompany {
-	font-size: 14px;
-	font-weight: bold;
+#timeline:before {
+	height: 2155px;
 }
 
-.timeEntry {
-	font-size: 12px;
+#timeline li,
+#timelineLogo li {
+	height: 250px;
 }
 
-#bbytes-logo,
-#ga-logo,
-#ciq-logo,
-#rlabs-logo,
-#fdale-logo,
-#freelance-logo,
-#ritntid-logo,
-#scboces-logo,
-#ouboces-logo {
-	width: 125px;
-	height: auto;
-	float: right;
-	transform: translateX(300px);
-}
 }
 
 /* Macbook Pro 15 Retina split screen ----------- */
@@ -315,6 +319,34 @@ and (min-width : 960px) {
 	font-size: 14px;
 }
 
+#timelineLogo {
+	display: block;
+}
+
+#timeline:before {
+	height: 2245px;
+}
+
+#ciq-logo,
+#rlabs-logo {
+	width: 300px;
+}
+
+#bbytes-logo,
+#ouboces-logo {
+	width: 200px;
+}
+#ga-logo,
+#fdale-logo,
+#ritntid-logo,
+#scboces-logo {
+	width: 150px;
+}
+
+#freelance-logo {
+	width: 100px;
+}
+
 #bbytes-logo,
 #ga-logo,
 #ciq-logo,
@@ -324,10 +356,9 @@ and (min-width : 960px) {
 #ritntid-logo,
 #scboces-logo,
 #ouboces-logo {
-	width: 200px;
 	height: auto;
 	float: right;
-	transform: translateX(260px);
+	transform: translateX(320px);
 }
 }
 
@@ -335,6 +366,26 @@ and (min-width : 960px) {
 @media only screen
 and (min-width : 1224px) {
 /* Styles */
+#ciq-logo,
+#rlabs-logo {
+	width: 350px;
+}
+
+#bbytes-logo,
+#ouboces-logo {
+	width: 250px;
+}
+#ga-logo,
+#fdale-logo,
+#ritntid-logo,
+#scboces-logo {
+	width: 200px;
+}
+
+#freelance-logo {
+	width: 125px;
+}
+
 #bbytes-logo,
 #ga-logo,
 #ciq-logo,
@@ -344,7 +395,6 @@ and (min-width : 1224px) {
 #ritntid-logo,
 #scboces-logo,
 #ouboces-logo {
-	width: 250px;
 	height: auto;
 	float: right;
 	transform: translateX(425px);
@@ -355,6 +405,26 @@ and (min-width : 1224px) {
 @media only screen
 and (min-width : 1440px) {
 /* Styles */
+#ciq-logo,
+#rlabs-logo {
+	width: 350px;
+}
+
+#bbytes-logo,
+#ouboces-logo {
+	width: 250px;
+}
+#ga-logo,
+#fdale-logo,
+#ritntid-logo,
+#scboces-logo {
+	width: 200px;
+}
+
+#freelance-logo {
+	width: 125px;
+}
+
 #bbytes-logo,
 #ga-logo,
 #ciq-logo,
@@ -364,7 +434,6 @@ and (min-width : 1440px) {
 #ritntid-logo,
 #scboces-logo,
 #ouboces-logo {
-	width: 250px;
 	height: auto;
 	float: right;
 	transform: translateX(525px);
@@ -375,6 +444,27 @@ and (min-width : 1440px) {
 @media only screen
 and (min-width : 1824px) {
 /* Styles */
+
+#ciq-logo,
+#rlabs-logo {
+	width: 350px;
+}
+
+#bbytes-logo,
+#ouboces-logo {
+	width: 250px;
+}
+#ga-logo,
+#fdale-logo,
+#ritntid-logo,
+#scboces-logo {
+	width: 200px;
+}
+
+#freelance-logo {
+	width: 125px;
+}
+
 #bbytes-logo,
 #ga-logo,
 #ciq-logo,
@@ -384,7 +474,6 @@ and (min-width : 1824px) {
 #ritntid-logo,
 #scboces-logo,
 #ouboces-logo {
-		width: 300px;
 		height: auto;
 		float: right;
 		transform: translateX(750px);
@@ -395,6 +484,7 @@ and (min-width : 1824px) {
 @media only screen
 and (min-width : 1920px) {
 /* Styles */
+
 #bbytes-logo,
 #ga-logo,
 #ciq-logo,
@@ -404,10 +494,29 @@ and (min-width : 1920px) {
 #ritntid-logo,
 #scboces-logo,
 #ouboces-logo {
+		height: auto;
+		float: right;
+		transform: translateX(750px);
+	}
+
+#ciq-logo,
+#rlabs-logo {
+	width: 350px;
+}
+
+#bbytes-logo,
+#ouboces-logo {
 	width: 250px;
-	height: auto;
-	float: right;
-	transform: translateX(825px);
+}
+#ga-logo,
+#fdale-logo,
+#ritntid-logo,
+#scboces-logo {
+	width: 200px;
+}
+
+#freelance-logo {
+	width: 125px;
 }
 }
 
