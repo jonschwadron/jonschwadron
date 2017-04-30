@@ -7,11 +7,173 @@
 <body>
 </body>
 
-<template name="resume">
+<template name="Nav">
 	<div class="container-fluid maxWidth">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<ul id="simplenav">
+					<li>
+						<a href="#">jonschwadron@gmail.com</a>
+					</li>
+					<li>
+						<a href="/files/JonathanSchwadronR2017.pdf" target="_blank">dl resume</a>
+					  </li>
+					<li>
+						<a href="https://github.com/jonschwadron" target="_blank">github</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/jonschwadron/" target="_blank">linkedin</a>
+					</li>
+
+					  <li>
+						<a href="/work">work</a>
+					  </li>
+					  <li>
+						<a href="/">about me</a>
+					  </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="Footer">
+	<div class="container-fluid maxWidth">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<ul id="simplefooter">
+					<li>
+						Powered by <a href="https://www.meteor.com/" target="_blank">Meteor</a> | Hosted on <a href="https://www.heroku.com/home" target="_blank">Heroku</a> | Jonathan Schwadron 2017
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</template>
+
+<!-- <template name="Main">
+  {{> Nav}}
+
+  <div class="container-fluid maxWidth">
+	  <div class="row">
+		  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			  <h1>Jonathan Schwadron</h1>
+			  <h5>Web Developer | DevOps | IT Specialist</h5>
+			  <p>Looking for a job as a Front End Developer or UI Developer</p>
+			  <ul>
+				<li>
+					jonschwadron@gmail.com
+				</li>
+				<li>
+					linkedin
+				</li>
+				<li>
+					github
+				</li>
+			  </ul>
+		  </div>
+	  </div>
+  </div>
+</template> -->
+
+<template name="Work">
+	<div class="container-fluid maxWidth">
+		<div class="row">
+			 {{> Nav}}
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h3>The Tragedy of Darth Plagueis the Wise</h3>
+				<div id="robot-message" class="darth-plagueis-story"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h3>Pokebox</h3>
+				<div class="pokebox" id="box0">
+					<i class="fa fa-heart" id="heart0"></i>
+					<div>Pikachu.</div>
+					<img src='/images/pikachu__.gif' id="pikachu">
+				</div>
+				<div class="pokebox" id="box1">
+					<i class="fa fa-heart" id="heart1"></i>
+					<div>Charmander.</div>
+					<img src='/images/charmander__.gif' id="charmander">
+				</div>
+				<div class="pokebox" id="box2">
+					<i class="fa fa-heart" id="heart2"></i>
+					<div>Bulbasaur.</div>
+					<img src='/images/bulbasaur__.gif' id="bulbasaur">
+				</div>
+				<div class="pokebox" id="box3">
+					<i class="fa fa-heart" id="heart3"></i>
+					<div>Squirtle.</div>
+					<img src='/images/squirtle__.gif' id="squirtle">
+					<!-- <img src="{% static "personal/img/squirtle_.gif" %}" id="squirtle2"> -->
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="row">
+					<div class="col-sm-6">
+						<h3>Happiness Calculator</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div>
+							<label for="slider-salary">Salary:</label>
+							<input type="text" id="user-salary"
+							style="border:0; color:#b9cd6d; font-weight:bold;">
+						</div>
+						<div id="slider-salary"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div>
+							<label for="slider-expense">Monthly expense range:</label>
+							<input type="text" id="user-expense"
+							style="border:0; color:#b9cd6d; font-weight:bold;">
+						</div>
+						<div id="slider-expense"></div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<div>
+							<label for="user-tax">Tax:</label>
+							<input type="text" id="user-tax"
+							style="border:0; color:#b9cd6d; font-weight:bold;">
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<div>
+							<label for="total">Monthly Happiness Cash (ballpark):</label>
+							<h2><input type="text" id="total"
+							style="border:0; color:#b9cd6d; font-weight:bold;"></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="Main">
+	<div class="container-fluid maxWidth">
+		<div class="row">
+			 {{> Nav}}
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<h1>Jonathan Schwadron</h1>
+				<h5>Front End Developer | UI Developer</h5>
 			</div>
 		</div>
 		<div class="row">
@@ -103,93 +265,8 @@
 				</ul>
 			</div>
 		</div>
+		<div class="row">
+			 {{> Footer}}
+		</div>
 	</div>
-
-
-</template>
-
-<template name="projects">
-	<ul>
-		<li>
-			<div class="showcase-box">
-				<h3>Pokebox</h3>
-				<div class="pokebox" id="box0">
-					<i class="fa fa-heart" id="heart0"></i>
-					<div>Pikachu.</div>
-					<img src='/images/pikachu__.gif' id="pikachu">
-				</div>
-				<div class="pokebox" id="box1">
-					<i class="fa fa-heart" id="heart1"></i>
-					<div>Charmander.</div>
-					<img src='/images/charmander__.gif' id="charmander">
-				</div>
-				<div class="pokebox" id="box2">
-					<i class="fa fa-heart" id="heart2"></i>
-					<div>Bulbasaur.</div>
-					<img src='/images/bulbasaur__.gif' id="bulbasaur">
-				</div>
-				<div class="pokebox" id="box3">
-					<i class="fa fa-heart" id="heart3"></i>
-					<div>Squirtle.</div>
-					<img src='/images/squirtle__.gif' id="squirtle">
-					<!-- <img src="{% static "personal/img/squirtle_.gif" %}" id="squirtle2"> -->
-				</div>
-			</div>
-		</li>
-		<li>
-			<div class="showcase-box">
-				<h3>The Tragedy of Darth Plagueis the Wise</h3>
-				<div id="robot-message" class="darth-plagueis-story"></div>
-			</div>
-		</li>
-		<li>
-			<div class="showcase-box">
-					<div class="row">
-						<div class="col-sm-6">
-							<h3>Happiness Calculator</h3>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<div>
-								<label for="slider-salary">Salary:</label>
-								<input type="text" id="user-salary"
-								style="border:0; color:#b9cd6d; font-weight:bold;">
-							</div>
-							<div id="slider-salary"></div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<div>
-								<label for="slider-expense">Monthly expense range:</label>
-								<input type="text" id="user-expense"
-								style="border:0; color:#b9cd6d; font-weight:bold;">
-							</div>
-							<div id="slider-expense"></div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-sm-6">
-							<div>
-								<label for="user-tax">Tax:</label>
-								<input type="text" id="user-tax"
-								style="border:0; color:#b9cd6d; font-weight:bold;">
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-sm-6">
-							<div>
-								<label for="total">Monthly Happiness Cash (ballpark):</label>
-								<h2><input type="text" id="total"
-								style="border:0; color:#b9cd6d; font-weight:bold;"></h2>
-							</div>
-						</div>
-					</div>
-			</div>
-		</li>
-	</ul>
 </template>

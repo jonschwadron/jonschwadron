@@ -10,13 +10,13 @@ import '../imports/api/typed.js';
 
 
 Router.route('/', function () {
-  this.render('resume');
+  this.render('Main');
 });
-Router.route('/projects');
+Router.route('/work');
 
 if (Meteor.isClient) {
 
-	Template.resume.onRendered(function(){
+	Template.Main.onRendered(function(){
 
 		this.$('#bbytes').hover(function() {
 			$('#bbytes-logo').css('transition', 'all 0.5s');
@@ -185,7 +185,7 @@ if (Meteor.isClient) {
 		});
 	});
 
-	Template.projects.onRendered(function () {
+	Template.Work.onRendered(function () {
 		Meteor.setInterval(function(){
 			// var elem = document.getElementById('robot-message');
 		    // elem.scrollTop = elem.scrollHeight;
