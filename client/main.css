@@ -4,6 +4,11 @@
        max-width:1170px;
 }
 
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
 /* CSS declarations go here */
 
 #simplenav li,
@@ -281,6 +286,50 @@ li {
 	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 
+.resume-date {
+	float: right;
+}
+
+.resume-description {
+	margin: 5px 0 5px 5px;
+}
+
+.resume-section {
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+
+#resume-experience li,
+#resume-education li {
+	padding: 5px 5px 5px 5px;
+}
+
+#resume-experience > li img  {
+	display: none;
+	float: right;
+	width: 200px;
+	height: auto;
+	transform: translateX(475px) perspective(300px) rotateY(-20deg);
+}
+
+#resume-experience > li:hover {
+	transition: all 0.5s;
+	transform: translateX(-50px) perspective(300px) rotateY(4deg);
+}
+
+#resume-experience > li:hover img {
+	display: inline-block;
+	position: absolute;
+	animation: 1s logo-appear;
+	top: 10px;
+}
+@keyframes logo-appear {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+
+
 
 /* Media Queries */
 /* Smartphones (landscape) ----------- */
@@ -441,23 +490,6 @@ and (min-width : 1224px) {
 }
 }
 
-.resume-date {
-	float: right;
-}
-
-.resume-description {
-	margin: 5px 0 5px 5px;
-}
-
-.resume-section {
-	margin-top: 25px;
-	margin-bottom: 15px;
-}
-
-#resume-experience li,
-#resume-education li {
-	padding: 5px 0 5px 5px;
-}
 /* Macbook Pro 15 Retina 1440p ----------- */
 @media only screen
 and (min-width : 1440px) {
