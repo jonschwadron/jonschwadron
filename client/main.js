@@ -12,7 +12,10 @@ import '../imports/api/typed.js';
 Router.route('/', function () {
   this.render('Main');
 });
-Router.route('/work');
+
+Router.route('/work', function () {
+  this.render('Work');
+});
 
 Router.route('/darth-plagueis', function () {
   this.render('DarthPlagueis');
@@ -25,6 +28,12 @@ Router.route('/pokebox-css', function () {
 Router.route('/happiness-calculator', function () {
   this.render('HappinessCalculator');
 });
+
+Router.route('/resume', function () {
+  this.render('Resume');
+});
+
+
 
 if (Meteor.isClient) {
 
@@ -217,7 +226,7 @@ if (Meteor.isClient) {
 	Template.Work.onRendered(function () {
 
 	});
-	
+
 	Template.HappinessCalculator.onRendered(function () {
 		$( "#slider-salary" ).slider({
 			value: 50000,
