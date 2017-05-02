@@ -6,12 +6,6 @@ import '../imports/api/bootstrap.min.js';
 import '../imports/api/jquery-ui.min.js';
 import '../imports/api/jquery.ui.touch-punch.min.js';
 import './main.html';
-import './happinesscalculator';
-import './pokeboxcss.html';
-import './darthplagueis.html';
-import './resume.html';
-import './timeline.html';
-import './cool.html';
 import '../imports/api/typed.js';
 
 
@@ -45,6 +39,10 @@ Router.route('/resume', function () {
 
 Router.route('/cool', function () {
   this.render('Cool');
+});
+
+Router.route('/contact', function () {
+  this.render('Contact');
 });
 
 

@@ -1,0 +1,91 @@
+/* The sticky menu */
+.stickymenu {
+	position: fixed;
+	width: 100px;
+}
+
+.stickymenu-list {
+	height: 50px;
+	line-height: 15px;
+}
+
+.stickymenu-label {
+	border-right: 7px solid red;
+	width: 100px;
+	padding: 15px;
+
+	left: -93px;
+	background-color: white;
+	color: black;
+	position: relative;
+	transition: all 0.5s;
+}
+
+.stickymenu-list:hover .stickymenu-label {
+	left: 0px;
+}
+
+
+/*.stickymenu-icon:hover {
+	left: 100px;
+}
+
+.stickymenu-icon:hover + .stickymenu-label {
+	left: 0px;
+}*/
+
+/* everything else*/
+
+
+#interface {
+	max-width: 400px;
+	color: white;
+	margin: 0 auto;
+	border: 1px solid black;
+	height: 500px;
+}
+
+#experience li {
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	color: black;
+	/*left: -50px;*/
+}
+
+.container-display {
+	overflow: hidden;
+	background-color: white;
+	color: black;
+	height: 100px;
+}
+
+.experience {
+	padding: 10px;
+	background-color: white;
+	position: relative;
+	height: 50px;
+	left: 0px;
+	z-index: 2;
+	transition: all 0.5s;
+}
+
+.logo {
+	padding: 10px;
+	top: -50px;
+	left: -50px;
+	height: 50px;
+	width: 50px;
+	background-color: red;
+	color: white;
+	position: relative;
+	z-index: 1;
+	transition: all 0.5s;
+}
+.experience:hover {
+	left: 50px;
+}
+
+.experience:hover + .logo {
+	left: 0px;
+}

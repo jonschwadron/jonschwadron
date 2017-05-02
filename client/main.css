@@ -1,23 +1,4 @@
-/* Cool */
-.background {
-	background-color: rgb(77, 133, 104);
-}
 
-#interface {
-	background-color: black;
-	max-width: 660px;
-	height: 500px;
-	color: white;
-	margin: 0 auto;
-}
-
-#experience li {
-	width: 100%;
-	height: 50px;
-	background-color: white;
-	color: black;
-	/*left: -50px;*/
-}
 
 /* Boostrap configuration and custom classes*/
 .maxWidth {
@@ -344,294 +325,33 @@ li {
 	top: 10px;
 }
 @keyframes logo-appear {
-  0% { opacity: 0 }
-  100% { opacity: 1 }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-
-
-
-/* Media Queries */
-/* Smartphones (landscape) ----------- */
-@media only screen
-and (min-width : 400px) {
-/* Styles */
-.timeEntryCompany {
-	font-size: 14px;
-	font-weight: bold;
+.contact-info {
+	width: 400px;
+	margin: 0 auto;
+	position: relative;
+	top: 70px;
+	font-family: monospace;
+	font-size: 28px;
+	text-align: center;
 }
 
-.timeEntry {
-	font-size: 12px;
-}
-
-#timelineLogo {
-	display: none;
-}
-
-#timeline:before {
-	height: 2415px;
-}
-
-#timeline li,
-#timelineLogo li {
-	height: 280px;
-}
-
-.timeBox {
-	width: 100%;
-}
-
-.timeBox:hover {
-	transition: none;
-	transform: none;
-	border: none;
-	box-shadow: none;
-}
-
-}
-
-
-/* Smartphones ----------- */
-@media only screen
-and (min-width : 667px) {
-/* Styles */
-#timeline:before {
-	height: 2155px;
-}
-
-#timeline li,
-#timelineLogo li {
-	height: 250px;
-}
-
-}
-
-/* Macbook Pro 15 Retina split screen ----------- */
-@media only screen
-and (min-width : 960px) {
-/* Styles */
-
-.timeEntryCompany {
-	font-size: 18px;
-	font-weight: bold;
-}
-
-.timeEntry {
-	font-size: 14px;
-}
-
-#timelineLogo {
-	display: block;
-}
-
-#timeline:before {
-	height: 2245px;
-}
-
-#ciq-logo,
-#rlabs-logo {
-	width: 300px;
-}
-
-#bbytes-logo,
-#ouboces-logo {
-	width: 200px;
-}
-#ga-logo,
-#fdale-logo,
-#ritntid-logo,
-#scboces-logo {
-	width: 150px;
-}
-
-#freelance-logo {
-	width: 100px;
-}
-
-#bbytes-logo,
-#ga-logo,
-#ciq-logo,
-#rlabs-logo,
-#fdale-logo,
-#freelance-logo,
-#ritntid-logo,
-#scboces-logo,
-#ouboces-logo {
+#avatar {
+	width: 250px;
 	height: auto;
-	float: right;
-	transform: translateX(320px);
+	border: 1px solid black;
+	border-radius: 250px;
 }
 
-.timeBox:hover {
-	transition: all 0.4s;
-	transform-origin: left;
-	transform: perspective(300px) rotateY(7deg);
-	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
-}
-}
-
-/* Desktops and laptops ----------- */
-@media only screen
-and (min-width : 1224px) {
-/* Styles */
-#ciq-logo,
-#rlabs-logo {
-	width: 250px;
-}
-
-#bbytes-logo,
-#ouboces-logo {
-	width: 250px;
-}
-#ga-logo,
-#fdale-logo,
-#ritntid-logo,
-#scboces-logo {
-	width: 200px;
-}
-
-#freelance-logo {
-	width: 125px;
-}
-
-#bbytes-logo,
-#ga-logo,
-#ciq-logo,
-#rlabs-logo,
-#fdale-logo,
-#freelance-logo,
-#ritntid-logo,
-#scboces-logo,
-#ouboces-logo {
-	height: auto;
-	float: right;
-	transform: translateX(425px);
-}
-}
-
-/* Macbook Pro 15 Retina 1440p ----------- */
-@media only screen
-and (min-width : 1440px) {
-/* Styles */
-#ciq-logo,
-#rlabs-logo {
-	width: 250px;
-}
-
-#bbytes-logo,
-#ouboces-logo {
-	width: 250px;
-}
-#ga-logo,
-#fdale-logo,
-#ritntid-logo,
-#scboces-logo {
-	width: 200px;
-}
-
-#freelance-logo {
-	width: 125px;
-}
-
-#bbytes-logo,
-#ga-logo,
-#ciq-logo,
-#rlabs-logo,
-#fdale-logo,
-#freelance-logo,
-#ritntid-logo,
-#scboces-logo,
-#ouboces-logo {
-	height: auto;
-	float: right;
-	transform: translateX(525px);
-}
-}
-
-/* Large screens ----------- */
-@media only screen
-and (min-width : 1824px) {
-/* Styles */
-
-#ciq-logo,
-#rlabs-logo {
-	width: 250px;
-}
-
-#bbytes-logo,
-#ouboces-logo {
-	width: 250px;
-}
-#ga-logo,
-#fdale-logo,
-#ritntid-logo,
-#scboces-logo {
-	width: 200px;
-}
-
-#freelance-logo {
-	width: 125px;
-}
-
-#bbytes-logo,
-#ga-logo,
-#ciq-logo,
-#rlabs-logo,
-#fdale-logo,
-#freelance-logo,
-#ritntid-logo,
-#scboces-logo,
-#ouboces-logo {
-		height: auto;
-		float: right;
-		transform: translateX(750px);
-	}
-}
-
-/* Macbook Pro 15 Retina full screen ----------- */
-@media only screen
-and (min-width : 1920px) {
-/* Styles */
-
-#bbytes-logo,
-#ga-logo,
-#ciq-logo,
-#rlabs-logo,
-#fdale-logo,
-#freelance-logo,
-#ritntid-logo,
-#scboces-logo,
-#ouboces-logo {
-		height: auto;
-		float: right;
-		transform: translateX(750px);
-	}
-
-#ciq-logo,
-#rlabs-logo {
-	width: 350px;
-}
-
-#bbytes-logo,
-#ouboces-logo {
-	width: 250px;
-}
-#ga-logo,
-#fdale-logo,
-#ritntid-logo,
-#scboces-logo {
-	width: 200px;
-}
-
-#freelance-logo {
-	width: 125px;
-}
-}
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
+.project-list {
+	width: 400px;
+	margin: 0 auto;
+	position: relative;
+	top: 70px;
+	font-family: monospace;
+	font-size: 15px;
+	text-align: center;
 }

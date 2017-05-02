@@ -5,25 +5,22 @@
 </head>
 
 <body>
+	{{> Nav}}
 </body>
 
 <template name="Nav">
-	<div class="container-fluid maxWidth">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<ul id="simplenav">
-					<li>
-						<a href="#">jonschwadron@gmail.com</a>
-					</li>
-					  <li>
-						<a href="/work">work</a>
-					  </li>
-					  <li>
-						<a href="/">about me</a>
-					  </li>
-				</ul>
-			</div>
-		</div>
+	<div class="stickymenu">
+		<ul>
+			<li class="stickymenu-list">
+				<a href="/"><div class="stickymenu-label">Resume</div></a>
+			</li>
+			<li class="stickymenu-list">
+				<a href="/work"><div class="stickymenu-label">Projects</div></a>
+			</li>
+			<li class="stickymenu-list">
+				<a href="/contact"><div class="stickymenu-label">Contact</div></a>
+			</li>
+		</ul>
 	</div>
 </template>
 
@@ -41,68 +38,8 @@
 	</div>
 </template>
 
-<!-- <template name="Main">
-  {{> Nav}}
-
-  <div class="container-fluid maxWidth">
-	  <div class="row">
-		  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			  <h1>Jonathan Schwadron</h1>
-			  <h5>Web Developer | DevOps | IT Specialist</h5>
-			  <p>Looking for a job as a Front End Developer or UI Developer</p>
-			  <ul>
-				<li>
-					jonschwadron@gmail.com
-				</li>
-				<li>
-					linkedin
-				</li>
-				<li>
-					github
-				</li>
-			  </ul>
-		  </div>
-	  </div>
-  </div>
-</template> -->
-
-<template name="Work">
-	<div class="container">
-		<div class="row">
-			 {{> Nav}}
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<ul>
-					<li>
-						<a href="http://www.lightisyourfriend.com/">Light Is Your Friend</a>
-					</li>
-					<li>
-						<a href="/darth-plagueis">The Tragedy of Darth Plagueis</a>
-					</li>
-					<li>
-						<a href="/pokebox-css">Pokebox CSS</a>
-					</li>
-					<li>
-						<a href="/happiness-calculator">Happiness Calculator</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-			</div>
-		</div>
-	</div>
-</template>
-
 <template name="Main">
 	<div class="container">
-		<div class="row">
-			 {{> Nav}}
-		</div>
 		<div class="row">
 			<div  id="resume-column" class="col-xs-10 col-sm-10 col-md-8 col-lg-6 col-xl-6 col-centered">
 				<div class="resume-section">
