@@ -6,6 +6,12 @@ import '../imports/api/bootstrap.min.js';
 import '../imports/api/jquery-ui.min.js';
 import '../imports/api/jquery.ui.touch-punch.min.js';
 import './main.html';
+import './happinesscalculator';
+import './pokeboxcss.html';
+import './darthplagueis.html';
+import './resume.html';
+import './timeline.html';
+import './cool.html';
 import '../imports/api/typed.js';
 
 
@@ -29,8 +35,16 @@ Router.route('/happiness-calculator', function () {
   this.render('HappinessCalculator');
 });
 
+Router.route('/timeline', function () {
+  this.render('Timeline');
+});
+
 Router.route('/resume', function () {
   this.render('Resume');
+});
+
+Router.route('/cool', function () {
+  this.render('Cool');
 });
 
 

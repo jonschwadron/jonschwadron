@@ -1,0 +1,52 @@
+<template name="HappinessCalculator">
+	<div class="container-fluid maxWidth">
+		<div class="row">
+			 {{> Nav}}
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<h3>Happiness Calculator</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div>
+					<label for="slider-salary">Salary:</label>
+					<input type="text" id="user-salary"
+					style="border:0; color:#b9cd6d; font-weight:bold;">
+				</div>
+				<div id="slider-salary"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div>
+					<label for="slider-expense">Monthly expense range:</label>
+					<input type="text" id="user-expense"
+					style="border:0; color:#b9cd6d; font-weight:bold;">
+				</div>
+				<div id="slider-expense"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<div>
+					<label for="user-tax">Tax:</label>
+					<input type="text" id="user-tax"
+					style="border:0; color:#b9cd6d; font-weight:bold;">
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<div>
+					<label for="total">Monthly Happiness Cash (ballpark):</label>
+					<h2><input type="text" id="total"
+					style="border:0; color:#b9cd6d; font-weight:bold;"></h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
