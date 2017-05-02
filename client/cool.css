@@ -89,3 +89,47 @@
 .experience:hover + .logo {
 	left: 0px;
 }
+
+#projectboxes li {
+	display: inline-block;
+	float: left;
+	width: 200px;
+	height: 200px;
+	background-color: teal;
+	color: white;
+	text-align: center;
+	overflow: hidden;
+}
+
+.projectbox-bottom a {
+	color: white;
+}
+
+
+.projectbox-bottom a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+
+.projectbox-top {
+	position: relative;
+	top: 0;
+	transition: all 0.4s;
+}
+
+.projectbox-bottom {
+	height: 200px;
+	width: 200px;
+	padding-top: 60px;
+	background-color: red;
+	position: relative;
+	top: 0px;
+	transition: all 0.4s;
+	z-index: 1;
+}
+
+#projectboxes li:hover > .projectbox-top,
+#projectboxes li:hover > .projectbox-bottom {
+	top: -150px;
+}

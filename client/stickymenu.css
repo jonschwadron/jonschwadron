@@ -2,6 +2,7 @@
 .stickymenu {
 	position: fixed;
 	width: 100px;
+	z-index: 1;
 }
 
 .stickymenu-list {
