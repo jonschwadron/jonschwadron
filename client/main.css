@@ -340,10 +340,10 @@ li {
 }
 
 #avatar {
-	width: 250px;
+	width: 180px;
 	height: auto;
 	border: 1px solid black;
-	border-radius: 250px;
+	border-radius: 180px;
 }
 
 .project-list {

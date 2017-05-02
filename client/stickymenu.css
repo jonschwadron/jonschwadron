@@ -5,20 +5,24 @@
 }
 
 .stickymenu-list {
-	height: 50px;
-	line-height: 15px;
+	line-height: 20px;
+}
+
+.stickymenu-list a {
+	text-decoration: none;
 }
 
 .stickymenu-label {
 	border-right: 7px solid red;
-	width: 100px;
-	padding: 15px;
-
-	left: -93px;
-	background-color: white;
-	color: black;
+	width: 150px;
+	padding: 15px 0 15px 25px;
+	left: -143px;
+	background-color: rgba(0,0,0,0.6);
+	color: white;
 	position: relative;
-	transition: all 0.5s;
+	transition: all 0.3s;
+	font-weight: 300;
+	font-size: 20px;
 }
 
 .stickymenu-list:hover .stickymenu-label {
