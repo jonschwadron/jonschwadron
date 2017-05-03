@@ -1,0 +1,104 @@
+
+#timeline:before {
+  position: absolute;
+  left: 22px;
+  top: -55px;
+  content: '';
+  width: 2px;
+  height: 2300px;
+  background: rgb(80,80,80);
+  background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+  background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  z-index: 5;
+  animation: tbar 2.5s;
+}
+
+@keyframes tbar {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+
+#timeline,
+#timelineLogo {
+	z-index: 5;
+	margin-top: 85px;
+}
+
+#timeline li,
+#timelineLogo li {
+	height: 250px;
+}
+
+#timelineLogo li {
+	padding-top: 15px;
+}
+
+#timeline li {
+	display: none;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	overflow: visible;
+}
+
+.timeBox {
+	float: left;
+	margin-left: 40px;
+	padding: 20px;
+	width: 600px;
+	transition: all 0.2s;
+}
+ .timeEntry {
+	 font-family: monospace;
+ }
+
+ .timeEntryLogo {
+	width: 220px;
+ 	height: auto;
+	padding: 10px;
+	float: right;
+	visibility: hidden;
+	transform: translateX(250px);
+ }
+
+ .timeEntryCompany {
+	 font-size: 18px;
+ }
+
+ #timeline li:before {
+   position: absolute;
+   top: 36px;
+   left: 2px;
+   content: '';
+   display: block;
+   width: 12px;
+   height: 12px;
+   margin-top: -10px;
+   background: white;
+   border-radius: 10px;
+   border: 1px solid black;
+   z-index: 10;
+ }
+
+ #timeline li:hover::before {
+	 background-color: black;
+	 transition: all 0.8s;
+ }
+
+#timeline li:hover .timeEntryLogo {
+	transition: all 0.3s;
+	visibility: visible;
+	transform: translateX(-50px);
+}
+
+.timeBox:hover {
+	transition: all 0.4s;
+	transform-origin: left;
+	transform: perspective(300px) rotateY(7deg);
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}

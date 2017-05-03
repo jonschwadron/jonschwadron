@@ -1,0 +1,15 @@
+.contact-info {
+	width: 400px;
+	margin: 0 auto;
+	padding-top: 30px;
+	font-family: monospace;
+	font-size: 28px;
+	text-align: center;
+}
+
+#avatar {
+	width: 180px;
+	height: auto;
+	border: 1px solid black;
+	border-radius: 180px;
+}

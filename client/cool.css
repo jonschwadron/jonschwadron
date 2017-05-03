@@ -1,29 +1,6 @@
-/* The sticky menu */
-.stickymenu {
-	position: fixed;
-	width: 100px;
-}
 
-.stickymenu-list {
-	height: 50px;
-	line-height: 15px;
-}
 
-.stickymenu-label {
-	border-right: 7px solid red;
-	width: 100px;
-	padding: 15px;
 
-	left: -93px;
-	background-color: white;
-	color: black;
-	position: relative;
-	transition: all 0.5s;
-}
-
-.stickymenu-list:hover .stickymenu-label {
-	left: 0px;
-}
 
 
 /*.stickymenu-icon:hover {

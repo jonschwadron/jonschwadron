@@ -8,9 +8,8 @@ import '../imports/api/jquery.ui.touch-punch.min.js';
 import './main.html';
 import '../imports/api/typed.js';
 
-
 Router.route('/', function () {
-  this.render('Main');
+  this.render('Resume');
 });
 
 Router.route('/work', function () {
@@ -45,12 +44,8 @@ Router.route('/contact', function () {
   this.render('Contact');
 });
 
-
-
 if (Meteor.isClient) {
-
-	Template.Main.onRendered(function(){
-
+	Template.Timeline.onRendered(function(){
 		this.$('#bbytes').hover(function() {
 			$('#bbytes-logo').css('transition', 'all 0.5s');
 			$('#bbytes-logo').css('visibility', 'visible');
@@ -66,7 +61,6 @@ if (Meteor.isClient) {
 			$('#ga-logo').css('visibility', 'visible');
 			$('#ga-logo').css('transform', 'translateX(0px)');
 		}, function() {
-			// on mouseout, reset the background colour
 			$('#ga-logo').css('visibility', '');
 			$('#ga-logo').css('transform', '');
 		});
@@ -233,10 +227,6 @@ if (Meteor.isClient) {
 			startDelay: 2000,
 			showCursor: false
 		});
-	});
-
-	Template.Work.onRendered(function () {
-
 	});
 
 	Template.HappinessCalculator.onRendered(function () {

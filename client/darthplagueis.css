@@ -1,0 +1,54 @@
+#robot-message {
+	height: 128px;
+	width: 640px;
+	padding: 12px;
+	overflow-y: auto;
+	background-color: rgba(0,0,0,0.66);
+	-webkit-box-shadow: 0px 28px 33px -11px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 28px 33px -11px rgba(0,0,0,0.75);
+	box-shadow: 0px 28px 33px -11px rgba(0,0,0,0.75);
+    animation: fade 1s linear;
+}
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+@-webkit-keyframes fade {
+	0% { opacity: 0 }
+	100% { opacity: 1 }
+}
+@-moz-keyframes fade {
+	0% {opacity: 0 }
+	100% {opacity: 1 }
+}
+
+.darth-plagueis-story {
+	color: white;
+	font-size: 16px;
+	font-family: monospace;
+}
+
+.typed-cursor {
+	color: white;
+	font-size: 18px;
+	line-height: 10px;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink {
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink {
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
