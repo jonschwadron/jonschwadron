@@ -48,6 +48,7 @@ Router.route('/contact', function () {
 
 
 if (Meteor.isClient) {
+
 	Template.Contact.helpers({
 	  mapOptions: function() {
 	    // Make sure the maps API has loaded
@@ -67,6 +68,7 @@ if (Meteor.isClient) {
 	});
 
 	Template.Contact.onCreated(function() {
+		new Clipboard('.btn');
 	  // We can use the `ready` callback to interact with the map API once the map is ready.
 	  GoogleMaps.ready('map', function(map) {
 	    // Add a marker to the map once it's ready
@@ -78,7 +80,7 @@ if (Meteor.isClient) {
 	});
 
 	Template.Contact.onRendered(function(){
-		GoogleMaps.load();
+		GoogleMaps.load({key:'AIzaSyBO04ekYQ1HfR856AIU3HLvsljXDIGMF0c'});
 	});
 
 	Template.Timeline.onRendered(function(){
