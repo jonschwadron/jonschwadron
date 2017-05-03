@@ -14,6 +14,24 @@
 	border-radius: 180px;
 }
 
+.fa-linkedin-square {
+	color: #0077B5;
+}
+
+.fa-github {
+	color: #000000;
+}
+
+.btn {
+	font-size: 12px;
+	padding: 5px 10px 5px 10px;
+	margin-left: 10px;
+}
+
+#email {
+	font-size: 22px;
+}
+
 .map-container {
 	border: 1px solid black;
 	max-width: 100%;
