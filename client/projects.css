@@ -5,6 +5,11 @@
 	font-size: 15px;
 }
 
+.project-demo {
+	margin: 0 auto;
+	max-width: 250px;
+}
+
 #projectboxes li {
 	display: inline-block;
 	float: left;
@@ -14,6 +19,11 @@
 	color: white;
 	text-align: center;
 	overflow: hidden;
+}
+
+#projectboxes img {
+	width: 200px;
+	height: auto;
 }
 
 .projectbox-bottom a {
