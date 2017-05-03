@@ -28,11 +28,15 @@
 	float: right;
 	width: 175px;
 	height: auto;
+
 	transform: perspective(300px) rotateY(-25deg);
 }
 
+#resume-experience > li {
+	transition: all 0.4s;
+}
+
 #resume-experience > li:hover {
-	transition: all 0.8s;
 	transform: translateX(-50px) perspective(300px) rotateY(4deg);
 }
 

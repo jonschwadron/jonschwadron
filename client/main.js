@@ -44,7 +44,43 @@ Router.route('/contact', function () {
   this.render('Contact');
 });
 
+
+
+
 if (Meteor.isClient) {
+	Template.Contact.helpers({
+	  mapOptions: function() {
+	    // Make sure the maps API has loaded
+	    if (GoogleMaps.loaded()) {
+	      // Map initialization options
+	      return {
+	        center: new google.maps.LatLng(39.099726, -94.576629),
+	        zoom: 14,
+			disableDefaultUI: true,
+			draggable: false,
+		    scrollwheel: false,
+		    panControl: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+	      };
+	    }
+	  }
+	});
+
+	Template.Contact.onCreated(function() {
+	  // We can use the `ready` callback to interact with the map API once the map is ready.
+	  GoogleMaps.ready('map', function(map) {
+	    // Add a marker to the map once it's ready
+	    // var marker = new google.maps.Marker({
+	    //   position: map.options.center,
+	    //   map: map.instance
+	    // });
+	  });
+	});
+
+	Template.Contact.onRendered(function(){
+		GoogleMaps.load();
+	});
+
 	Template.Timeline.onRendered(function(){
 		this.$('#bbytes').hover(function() {
 			$('#bbytes-logo').css('transition', 'all 0.5s');
