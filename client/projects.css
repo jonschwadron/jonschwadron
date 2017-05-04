@@ -1,13 +1,24 @@
-.project-showcase {
-	padding: 30px;
-	max-width: 880px;
+.project-list {
+	padding-top: 30px;
 	margin: 0 auto;
+	max-width: 880px;
+}
+
+.project-showcase {
+	max-width: 100%;
 	font-size: 15px;
+	padding-top: 30px;
+}
+
+.project-title {
+	width: 660px;
+	margin: 0 auto;
 }
 
 .project-demo {
+	padding: 25px;
+	width: 660px;
 	margin: 0 auto;
-	max-width: 250px;
 }
 
 #projectboxes li {
@@ -15,8 +26,8 @@
 	float: left;
 	width: 200px;
 	height: 200px;
-	background-color: teal;
-	color: white;
+
+
 	text-align: center;
 	overflow: hidden;
 }
@@ -41,6 +52,11 @@
 	position: relative;
 	top: 0;
 	transition: all 0.4s;
+	width: 200px;
+	height: 200px;
+	padding-top: 75px;
+	background-color: white;
+	color: black;
 }
 
 .projectbox-bottom {
@@ -48,6 +64,7 @@
 	width: 200px;
 	padding-top: 75px;
 	background-color: red;
+	color: white;
 	position: relative;
 	top: 0px;
 	transition: all 0.4s;
