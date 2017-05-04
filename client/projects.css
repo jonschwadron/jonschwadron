@@ -75,3 +75,11 @@
 #projectboxes li:hover > .projectbox-bottom {
 	top: -200px;
 }
+
+ .tool-indicator {
+	 background-color: white;
+	 color: black;
+	 padding: 2px 7px 2px 7px;
+	 margin-right: 3px;
+	 border-radius: 10px;
+ }
