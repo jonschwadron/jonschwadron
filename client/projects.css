@@ -1,7 +1,18 @@
-.project-list {
-	padding-top: 30px;
+#webdev,
+#devops {
+	padding: 25px;
 	margin: 0 auto;
 	max-width: 880px;
+	display: block;
+}
+
+#devops {
+
+}
+
+.project-list h3 {
+	margin-top: 40px;
+	margin-bottom: 20px;
 }
 
 .project-showcase {
@@ -21,13 +32,16 @@
 	margin: 0 auto;
 }
 
+#projectboxes {
+	display: block;
+	float: left;
+}
+
 #projectboxes li {
 	display: inline-block;
 	float: left;
 	width: 200px;
 	height: 200px;
-
-
 	text-align: center;
 	overflow: hidden;
 }
@@ -36,17 +50,6 @@
 	width: 200px;
 	height: auto;
 }
-
-.projectbox-bottom a {
-	color: white;
-}
-
-
-.projectbox-bottom a:hover {
-	color: white;
-	text-decoration: none;
-}
-
 
 .projectbox-top {
 	position: relative;
@@ -62,7 +65,7 @@
 .projectbox-bottom {
 	height: 200px;
 	width: 200px;
-	padding-top: 75px;
+	padding-top: 35px;
 	background-color: red;
 	color: white;
 	position: relative;
@@ -80,6 +83,7 @@
 	 background-color: white;
 	 color: black;
 	 padding: 2px 7px 2px 7px;
-	 margin-right: 3px;
+	 margin-right: 2px;
 	 border-radius: 10px;
+	 line-height: 23px;
  }
