@@ -6,15 +6,6 @@
 	display: block;
 }
 
-#devops {
-
-}
-
-.project-list h3 {
-	margin-top: 40px;
-	margin-bottom: 20px;
-}
-
 .project-showcase {
 	max-width: 100%;
 	font-size: 15px;
@@ -58,7 +49,7 @@
 	width: 200px;
 	height: 200px;
 	padding-top: 75px;
-	background-color: white;
+	background-color: rgb(225, 225, 225);
 	color: black;
 }
 
