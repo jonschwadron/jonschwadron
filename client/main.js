@@ -36,6 +36,10 @@ Router.route('/resume', function () {
   this.render('Resume');
 });
 
+Router.route('/grocery-app', function () {
+  this.render('GroceryApp');
+});
+
 Router.route('/cool', function () {
   this.render('Cool');
 });

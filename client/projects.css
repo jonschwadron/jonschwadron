@@ -1,9 +1,10 @@
 #webdev,
+#mobiledevelopment,
 #devops {
-	padding: 25px;
 	margin: 0 auto;
 	max-width: 880px;
-	display: block;
+	display: flex;
+    margin-left: 65px;
 }
 
 .project-showcase {
@@ -13,8 +14,7 @@
 }
 
 .project-title {
-	width: 660px;
-	margin: 0 auto;
+    margin-left: 65px;
 }
 
 .project-demo {
@@ -22,6 +22,13 @@
 	width: 660px;
 	margin: 0 auto;
 }
+
+.project-description {
+    max-width: 800px;
+    margin-left: 65px;
+    margin-right: 65px;
+}
+
 
 #projectboxes {
 	display: block;
@@ -73,8 +80,26 @@
  .tool-indicator {
 	 background-color: white;
 	 color: black;
-	 padding: 2px 7px 2px 7px;
-	 margin-right: 2px;
+	 padding: 2px 6px 2px 6px;
+	 margin-right: 1px;
 	 border-radius: 10px;
 	 line-height: 23px;
  }
+
+ .tool-indicator2 {
+	 background-color: red;
+	 color: white;
+	 padding: 2px 6px 2px 6px;
+	 margin-right: 1px;
+	 border-radius: 10px;
+	 line-height: 23px;
+ }
+
+ .project-demo img {
+     width: 400px;
+ 	height: auto;
+ }
+
+.project-description-meta li {
+    line-height: 27px;
+}
