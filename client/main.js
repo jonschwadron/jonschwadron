@@ -48,6 +48,14 @@ Router.route('/fsc-virtual-id', function () {
   this.render('FSCVirtualID');
 });
 
+Router.route('/ansible', function () {
+  this.render('Ansible');
+});
+
+Router.route('/chef', function () {
+  this.render('Chef');
+});
+
 Router.route('/cool', function () {
   this.render('Cool');
 });
