@@ -15,12 +15,18 @@
 
 .project-title {
     margin-left: 65px;
+    margin-top: 0;
+    padding-top: 30px;
 }
 
 .project-demo {
 	padding: 25px;
 	width: 660px;
-	margin: 0 auto;
+}
+
+.screenshots {
+    width: 400px;
+    height: auto;
 }
 
 .project-description {

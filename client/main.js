@@ -40,6 +40,14 @@ Router.route('/grocery-app', function () {
   this.render('GroceryApp');
 });
 
+Router.route('/fingr', function () {
+  this.render('Fingr');
+});
+
+Router.route('/fsc-virtual-id', function () {
+  this.render('FSCVirtualID');
+});
+
 Router.route('/cool', function () {
   this.render('Cool');
 });
