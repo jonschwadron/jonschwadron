@@ -97,6 +97,10 @@
     line-height: 27px;
 }
 
+.project-samples {
+    padding-bottom: 25px;
+}
+
 .backbutton {
     position: relative;
     top: 15px;
@@ -135,9 +139,8 @@
     height: auto;
 }
 
-.project-samples li {
+.project-samples-item li {
 	display: inline-block;
-	float: left;
 	width: 200px;
 	height: 200px;
 	text-align: center;
@@ -163,6 +166,6 @@
 	top: -220px;
 }
 
-.project-samples li:hover > .project-samples-cover {
+.project-samples-item li:hover > .project-samples-cover {
 	visibility: hidden;
 }
