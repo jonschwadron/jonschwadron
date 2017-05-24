@@ -13,35 +13,14 @@
 	padding-top: 30px;
 }
 
-.project-title {
+/*.project-title {
     margin-left: 65px;
     margin-top: 0;
     padding-top: 30px;
-}
-
-.project-demo {
-	padding: 25px;
-	width: 660px;
-}
-
-.project-screenshots {
-    margin-left: 30px;
-}
-
-.screenshots {
-    width: 400px;
-    height: auto;
-}
-
-.gif {
-    width: 300px;
-    height: auto;
-}
+}*/
 
 .project-description {
-    max-width: 800px;
-    margin-left: 65px;
-    margin-right: 65px;
+    padding-bottom: 25px;
 }
 
 
@@ -119,9 +98,9 @@
 }
 
 .backbutton {
-    position: absolute;
-    top: 20px;
-    left: 60px;
+    position: relative;
+    top: 15px;
+    left: -25px;
 }
 
 .backbutton a {
@@ -137,5 +116,53 @@
     padding: 3px 7px 3px 7px;
     background-color: rgb(230, 230, 230);
     border-radius: 10px;
+}
 
+.project-demo {
+	padding: 25px;
+	width: 660px;
+}
+
+
+
+.screenshots {
+    width: 400px;
+    height: auto;
+}
+
+.gif {
+    width: 200px;
+    height: auto;
+}
+
+.project-samples li {
+	display: inline-block;
+	float: left;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.project-samples-cover {
+	position: relative;
+	top: 0;
+	width: 200px;
+	height: 200px;
+	padding-top: 75px;
+	background-color: rgba(225, 225, 225, 0.98);
+	color: black;
+    z-index: 1;
+}
+
+.project-samples-show {
+	height: 200px;
+	width: 200px;
+	color: white;
+	position: relative;
+	top: -220px;
+}
+
+.project-samples li:hover > .project-samples-cover {
+	visibility: hidden;
 }

@@ -1,28 +1,60 @@
 <template name="Fingr">
-    <div class="backbutton">
-        <a href="/work"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to projects</a>
-    </div>
-	<div class="project-showcase">
-		<h3 class="project-title">fingr</h3>
-        <div class="project-description">
-            <p>
-                Text to finger spelling translator - Converts a string of text into a series of fingerspelled images via gif encoder library. Outputs animation into to animated .gif format. Upload to imgur and obtain url. Automatically copy URL to clipboard.
-            </p>
-            <ul class="project-description-meta">
+    <div class="container">
+        <div class="backbutton">
+            <a href="/work"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back to projects</a>
+        </div>
+        <div class="project-showcase">
+            <h3 class="project-title">fingr</h3>
+
+            <div class="project-description">
+                <p>
+                    Text to finger spelling translator - Converts a string of text into a series of fingerspelled images via gif encoder library. Outputs animation into to animated .gif format. Upload to imgur and obtain url. Automatically copy URL to clipboard.
+                </p>
+                <ul class="project-description-meta">
+                    <li>
+                        <span><i class="fa fa-github" aria-hidden="true"></i></span> <a href="https://github.com/jonschwadron/fingr">https://github.com/jonschwadron/fingr</a>
+                    </li>
+                    <li>
+                        <span class="tool-indicator2">Java</span>
+                        <span class="tool-indicator2">Android 4.3</span>
+                    </li>
+                </ul>
+            </div>
+            <h4>Screenshots</h4>
+            <hr />
+            <div class="project-screenshots">
+                <img class="screenshots" src='/images/fingr-splash.png'>
+                <img class="screenshots" src='/images/fingr-helloworld.png'>
+            </div>
+            <h4>Sample outputs</h4>
+            <hr />
+            <ul class="project-samples">
                 <li>
-                    <span><i class="fa fa-github" aria-hidden="true"></i></span> <a href="https://github.com/jonschwadron/fingr">https://github.com/jonschwadron/fingr</a>
+                    <div class="project-samples-cover">
+                        hello world
+                    </div>
+                    <div class="project-samples-show">
+                        <img class="gif" src='/images/fingr-output-helloworld.gif'>
+                    </div>
                 </li>
                 <li>
-                    <span class="tool-indicator2">Java</span>
-                    <span class="tool-indicator2">Android 4.3</span>
+                    <div class="project-samples-cover">
+                        coffee
+                    </div>
+                    <div class="project-samples-show">
+                        <img class="gif" src='/images/fingr-output-coffee.gif'>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="project-samples-cover">
+                        reddit
+                    </div>
+                    <div class="project-samples-show">
+                        <img class="gif" src='/images/fingr-output-reddit.gif'>
+                    </div>
                 </li>
             </ul>
         </div>
-        <span class="project-screenshots">
-            <img class="screenshots" src='/images/fingr-splash.png'>
-            <img class="screenshots" src='/images/fingr-helloworld.png'>
-            <img class="gif" src='/images/fingr-output-helloworld.gif'>
-        </span>
-
-	</div>
+    </div>
 </template>
