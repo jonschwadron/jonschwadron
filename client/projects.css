@@ -117,3 +117,25 @@
 .project-description-meta li {
     line-height: 27px;
 }
+
+.backbutton {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+}
+
+.backbutton a {
+    text-decoration: none;
+    color: black;
+    padding: 3px 7px 3px 7px;
+
+}
+
+.backbutton a:hover {
+    text-decoration: none;
+    color: black;
+    padding: 3px 7px 3px 7px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+
+}
