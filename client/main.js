@@ -5,8 +5,9 @@ import '../imports/ui/jquery-ui.min.css';
 import '../imports/api/bootstrap.min.js';
 import '../imports/api/jquery-ui.min.js';
 import '../imports/api/jquery.ui.touch-punch.min.js';
-import './main.html';
 import '../imports/api/typed.js';
+import '../imports/ui/airbnb.js';
+import './main.html';
 
 Router.route('/', function () {
   this.render('Resume');
@@ -64,6 +65,9 @@ Router.route('/contact', function () {
   this.render('Contact');
 });
 
+Router.route('/party-itinerary', function () {
+  this.render('PartyItinerary');
+});
 
 
 

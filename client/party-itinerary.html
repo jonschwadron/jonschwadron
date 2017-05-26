@@ -1,0 +1,98 @@
+<template name="PartyItinerary">
+	<div class="container">
+
+		<div class="row">
+			<div id="listing-input-form">
+				<form class="new-listing">
+					<input id="input-search" type="text" name="listing" placeholder="https://www.airbnb.com/rooms/12345678" /><i id="icon-search" class="fa fa-search" aria-hidden="true"></i>
+				</form>
+			</div>
+		</div>
+
+		<div class="row">
+			<div id="listing-info">
+				<a id="listing-toggle" href="#">airbnb listing info</a>
+			</div>
+			{{#if showListing}}
+			<ul>
+				<li class="listing-list">
+					<div class="date_label_from">
+						<label class="list-label" for="from">Check In</label>
+						<input type="text" id="from" placeholder="mm/dd/yyyy">
+					</div>
+					<div class="date_label_to">
+						<label class="list-label" for="to">Check Out</label>
+						<input type="text" id="to" placeholder="mm/dd/yyyy">
+					</div>
+					<div class="guest_label">
+						<label class="list-label" for="guests-selector">Guests</label>
+						<select name="numberOfGuests" class="arrow" id="guests-selector">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option selected value="15">15</option>
+							<option value="16">16</option>
+						</select>
+						<div class="arrow"></div>
+					</div>
+				</li>
+				<li class="listing-list">{{ listingPrice }} x Number of nights<div class="line"></div></li>
+				<li class="listing-list">Cleaning fee<div class="line"></div></li>
+				<li class="listing-list">Service fee<div class="line"></div></li>
+				<li class="listing-list">Occupancy Taxes<div class="line"></div></li>
+				<li class="listing-list">Total<div class="line"></div></li>
+			</ul>
+			<div id="generate-button">
+				Request to Book
+			</div>
+			{{/if}}
+		</div>
+
+		<div class="row">
+			<header>
+				<div id="party-itinerary">
+					<a id="itinerary-toggle" href="#">airbnb party itinerary</a>
+				</div>
+			</header>
+
+			{{#if showGenerator}}
+			<div id="individual-total">
+				<span><span id="total">${{ total }}</span> per person</span>
+			</div>
+
+			<ul>
+				<li class="expense-list">
+					<span id="room-text">${{ listingPrice }} / group of 15</span>
+					<span id="room-price">${{ individualRoomPrice }}</span>
+					<div class="line"></div>
+				</li>
+				{{#each expenses}}
+					{{> expense}}
+				{{/each}}
+			</ul>
+
+			<form class="new-expense">
+				<input type="text" name="text" placeholder="add expense" />
+				<input type="number" name="price" placeholder="cost" />
+				<button id="addExpenseButton">+</button>
+			</form>
+
+			<div id="generate-button">
+				Generate Party Itinerary
+			</div>
+			{{/if}}
+		</div>
+
+	</div>
+</template>
