@@ -65,8 +65,8 @@ Router.route('/contact', function () {
   this.render('Contact');
 });
 
-Router.route('/party-itinerary', function () {
-  this.render('PartyItinerary');
+Router.route('/airbnb', function () {
+  this.render('Airbnb');
 });
 
 

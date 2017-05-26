@@ -3,13 +3,13 @@ import { Expenses } from '../api/expenses.js';
 import { HTTP } from 'meteor/http';
 
 import './expense.js';
-//import './body.html';
+import './airbnb.html';
 
 //hide generator by default
 Session.set('listingInfoState', true);
 Session.set('generatorState', false);
 
-Template.body.helpers({
+Template.Airbnb.helpers({
 	showListing: function() {
 		return Session.get('listingInfoState');
 	},
@@ -43,7 +43,7 @@ Template.body.helpers({
 	}
 });
 
-Template.body.events({
+Template.Airbnb.events({
 	'focus #from': function() {
 		$("#from").datepicker();
 	},
