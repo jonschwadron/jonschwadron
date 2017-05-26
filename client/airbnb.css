@@ -1,4 +1,4 @@
-.row {
+.item {
 	width: 310px;
 	margin: 0 auto;
 	margin-top: 20px;
@@ -6,7 +6,7 @@
 	border: 1px solid #dce0e0;
 }
 
-.row:nth-child(1) {
+.item:nth-child(1) {
 	width: 310px;
 	margin-top: 20px;
 	border: none;
