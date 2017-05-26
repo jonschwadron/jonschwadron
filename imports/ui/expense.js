@@ -1,4 +1,3 @@
-import { Template } from 'meteor/templating';
 import { Expenses } from '../api/expenses.js';
 
 import './expense.html';

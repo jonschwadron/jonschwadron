@@ -47,13 +47,13 @@ ul {
 .listing-list,
 .expense-list {
 	list-style-type: none;
-	padding: 2px 0 6px 0;
+	padding: 6px 0 6px 0;
 	margin-left: 5px;
 }
 
 .listing-list .line,
 .expense-list .line {
-	padding: 6px 0 2px 0;
+	padding: 6px 0 6px 0;
 	border-bottom: 1px solid #dce0e0;
 }
 
