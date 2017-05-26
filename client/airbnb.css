@@ -1,17 +1,31 @@
+#input-search::-webkit-input-placeholder {
+    color: rgb(190, 190, 190);
+}
+
 .item {
 	width: 310px;
 	margin: 0 auto;
-	margin-top: 20px;
-	padding: 10px 15px 10px 15px;
+	margin-top: 15px;
+	padding: 10px 10px 10px 10px;
 	border: 1px solid #dce0e0;
 }
 
 .item:nth-child(1) {
 	width: 310px;
-	margin-top: 20px;
+	margin-top: 15px;
 	border: none;
 	padding: 0;
 	height: 40px;
+}
+
+.item:nth-child(2) {
+    margin-top: 33px;
+}
+
+#hint-url {
+    color: rgb(189, 189, 189);
+    font-size: 12px;
+    padding-top: 3px;
 }
 
 .new-listing input {
@@ -161,7 +175,7 @@ button.delete {
 .date_label_to,
 .guest_label {
 	display: inline-block;
-	margin-right: 8px;
+	margin-right: 7px;
 }
 
 .date_label_from label,
@@ -173,6 +187,7 @@ button.delete {
 
 .guest_label {
 	float: right;
+    margin-right: 20px;
 }
 
 #from,
