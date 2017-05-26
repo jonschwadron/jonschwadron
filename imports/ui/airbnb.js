@@ -9,7 +9,13 @@ import './airbnb.html';
 Session.set('listingInfoState', true);
 Session.set('generatorState', true);
 
+Template.Airbnb.onRendered(function(){
+    //jquery code
+    $("#input-search").append("https://www.airbnb.com/rooms/1415908");
+});
+
 Template.Airbnb.helpers({
+
 	showListing: function() {
 		return Session.get('listingInfoState');
 	},
@@ -95,7 +101,7 @@ Template.Airbnb.events({
 		}
 
 		Session.set('listingInfoState', true);
-		target.listing.value = '';
+		//target.listing.value = '';
 	},
 	'submit .new-expense' (event) {
 		// Prevent default browser form submit
