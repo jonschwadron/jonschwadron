@@ -186,8 +186,9 @@ button.delete {
 }
 
 .guest_label {
-	float: right;
+	/*float: right;*/
     margin-right: 20px;
+    margin-bottom: 25px;
 }
 
 #from,
