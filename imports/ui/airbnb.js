@@ -7,7 +7,7 @@ import './airbnb.html';
 
 //hide generator by default
 Session.set('listingInfoState', true);
-Session.set('generatorState', false);
+Session.set('generatorState', true);
 
 Template.Airbnb.helpers({
 	showListing: function() {
