@@ -10,7 +10,7 @@ Session.set('generatorState', true);
 
 Template.Airbnb.onRendered(function(){
     //jquery code
-    $("#input-search").append("https://www.airbnb.com/rooms/1415908");
+    //$("#input-search").append("https://www.airbnb.com/rooms/1415908");
 });
 
 Template.Airbnb.helpers({
@@ -91,8 +91,8 @@ Template.Airbnb.events({
 
 		if (Meteor.isClient) {
 			Meteor.call('getListing', listingId, function(error, result) {
+                console.log(result);
 				console.log(result.listing.cleaning_fee_native);
-
 				Session.set({
 					price: result.listing.price,
 				});
