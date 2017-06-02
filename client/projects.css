@@ -1,4 +1,6 @@
 #webdev,
+#uidev,
+#wpdev,
 #mobiledevelopment,
 #devops {
 	margin: 0 auto;
@@ -126,11 +128,16 @@
 	width: 660px;
 }
 
-
-
 .screenshots {
     width: 400px;
     height: auto;
+	padding: 0 0 3px 0;
+}
+
+.screenshots-small {
+    width: 250px;
+    height: auto;
+	padding: 0 0 3px 0;
 }
 
 .gif {

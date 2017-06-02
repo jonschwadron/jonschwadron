@@ -69,6 +69,11 @@ Router.route('/airbnb', function () {
   this.render('Airbnb');
 });
 
+Router.route('/django-rating-system', function () {
+  this.render('DjangoRatingSystem');
+});
+
+
 
 
 if (Meteor.isClient) {
