@@ -10,10 +10,10 @@ html {
 }
 
 body {
+  min-height: 100%;
   position: relative;
   margin: 0;
   padding-bottom: 6rem;
-  min-height: 100%;
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -26,6 +26,7 @@ body {
   background-color: rgba(0,0,0,0.1);
   font-size: 12px;
   text-align: right;
+  z-index: 12
 }
 
 ul {
@@ -40,4 +41,8 @@ li {
 .container {
     max-width: 880px;
     margin: 0 auto;
+}
+
+.progress {
+	width: 72%;
 }
