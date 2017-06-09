@@ -79,8 +79,35 @@ Router.route('/django-rating-system', function () {
 
 if (Meteor.isClient) {
 
+	Template.Overview.events({
+		'click #emailcopiednotify'() {
+			console.log("btn3 clicked.");
+			// Get the snackbar DIV
+			var x = document.getElementById("snackbar");
+
+			// Add the "show" class to DIV
+			x.className = "show";
+
+			// After 3 seconds, remove the show class from DIV
+			setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+		}
+	});
+
 	Template.Overview.onRendered(function () {
+		//copy to clipboard button on the email face of the rotating cube
 		new Clipboard('.btn2');
+
+		this.$('.').hover(function () {
+			$('#bbytes-logo').css('transition', 'all 0.5s');
+			$('#bbytes-logo').css('visibility', 'visible');
+			$('#bbytes-logo').css('transform', 'translateX(0px)');
+		}, function () {
+			// on mouseout, reset the background colour
+			$('#bbytes-logo').css('visibility', '');
+			$('#bbytes-logo').css('transform', '');
+		});
+
+
 
 		// Docs at http://simpleweatherjs.com
 
@@ -416,3 +443,5 @@ if (Meteor.isClient) {
 		}
 	});
 }
+
+console.log("expenses.js loaded");
