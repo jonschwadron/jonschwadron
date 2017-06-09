@@ -224,10 +224,10 @@ i {
 .right:hover > .cubeicon,
 .front:hover > .cubeicon,
 .back:hover > .cubeicon,
-.left:focus > .btn2 > .cubeicon,
-.right:focus > .cubeicon,
-.front:focus > .cubeicon,
-.back:focus > .cubeicon  {
+.left:active > .btn2 > .cubeicon,
+.right:active > .cubeicon,
+.front:active > .cubeicon,
+.back:active > .cubeicon  {
   animation: glow 0.3s linear;
   color: red;
 }
