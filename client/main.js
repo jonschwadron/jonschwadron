@@ -81,33 +81,45 @@ if (Meteor.isClient) {
 
 	Template.Overview.events({
 		'click #emailcopiednotify'() {
-			console.log("btn3 clicked.");
-			// Get the snackbar DIV
-			var x = document.getElementById("snackbar");
+			var email = document.getElementById("sb-email");
+			email.className = "show";
+			setTimeout(
+				function () {
+					email.className = email.className.replace("show", "");
+				}, 3000);
+		},
 
-			// Add the "show" class to DIV
-			x.className = "show";
+		'click #githubnotify'() {
+			var git = document.getElementById("sb-git");
+			git.className = "show";
+			setTimeout(function () {
+				git.className = git.className.replace("show", "");
+				window.open('https://github.com/jonschwadron');
+			}, 1000);
+		},
 
-			// After 3 seconds, remove the show class from DIV
-			setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+		'click #linkedinnotify'() {
+			var lin = document.getElementById("sb-linkedin");
+			lin.className = "show";
+			setTimeout(function () {
+				lin.className = lin.className.replace("show", "");
+				window.open('https://www.linkedin.com/in/jonschwadron');
+			}, 1000);
+		},
+
+		'click #ganotify'() {
+			var ga = document.getElementById("sb-ga");
+			ga.className = "show";
+			setTimeout(function () {
+				ga.className = ga.className.replace("show", "");
+				window.open('https://profiles.generalassemb.ly/profiles/jonschwadron');
+			}, 1000);
 		}
 	});
 
 	Template.Overview.onRendered(function () {
 		//copy to clipboard button on the email face of the rotating cube
 		new Clipboard('.btn2');
-
-		this.$('.').hover(function () {
-			$('#bbytes-logo').css('transition', 'all 0.5s');
-			$('#bbytes-logo').css('visibility', 'visible');
-			$('#bbytes-logo').css('transform', 'translateX(0px)');
-		}, function () {
-			// on mouseout, reset the background colour
-			$('#bbytes-logo').css('visibility', '');
-			$('#bbytes-logo').css('transform', '');
-		});
-
-
 
 		// Docs at http://simpleweatherjs.com
 
@@ -188,6 +200,17 @@ if (Meteor.isClient) {
 	});
 
 	Template.Timeline.onRendered(function () {
+
+		// this.$('.').hover(function () {
+		// 	$('#bbytes-logo').css('transition', 'all 0.5s');
+		// 	$('#bbytes-logo').css('visibility', 'visible');
+		// 	$('#bbytes-logo').css('transform', 'translateX(0px)');
+		// }, function () {
+		// 	// on mouseout, reset the background colour
+		// 	$('#bbytes-logo').css('visibility', '');
+		// 	$('#bbytes-logo').css('transform', '');
+		// });
+
 		this.$('#bbytes').hover(function () {
 			$('#bbytes-logo').css('transition', 'all 0.5s');
 			$('#bbytes-logo').css('visibility', 'visible');
@@ -443,5 +466,3 @@ if (Meteor.isClient) {
 		}
 	});
 }
-
-console.log("expenses.js loaded");

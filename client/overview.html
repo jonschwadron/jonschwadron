@@ -10,15 +10,20 @@
 		</div>
 		<div class="wrap">
 			<div class="cube">
-				<a href="https://github.com/jonschwadron" target="blank"><div class="front"><i class="fa fa-github cubeicon" aria-hidden="true"></i></div></a>
-				<a href="http://profiles.generalassemb.ly/profiles/jonschwadron" target="blank"><div class="back"><i class="fa fa-user cubeicon" aria-hidden="true"></i></div></a>
+				<div class="front" id="githubnotify"><i class="fa fa-github cubeicon" aria-hidden="true"></i></div>
+				<div class="back" id="ganotify"><i class="fa fa-user cubeicon" aria-hidden="true"></i></div>
+				<div class="left"><span class="btn2" id="emailcopiednotify" data-clipboard-text="jonschwadron@gmail.com"><i class="fa fa-envelope cubeicon" aria-hidden="true"></i></span></div>
+				<div class="right" id="linkedinnotify"><i class="fa fa-linkedin cubeicon" aria-hidden="true"></i></div>
 				<div class="top"></div>
 				<div class="bottom"></div>
 				<div class="shadow"></div>
-				<div class="left"><span class="btn2" id="emailcopiednotify" data-clipboard-text="jonschwadron@gmail.com"><i class="fa fa-envelope cubeicon" aria-hidden="true"></i></span></div>
-				<a href="https://www.linkedin.com/in/jonschwadron" target="blank"><div class="right"><i class="fa fa-linkedin cubeicon" aria-hidden="true"></i></div></a>
 			</div>
 		</div>
-		<div id="snackbar">jonschwadron@gmail.com copied to clipboard!</div>
+		<div class=sb-container>
+			<div id="sb-email">jonschwadron@gmail.com copied to clipboard!</div>
+			<div id="sb-git">Launching Github profile...</div>
+			<div id="sb-linkedin">Launching LinkedIn profile...</div>
+			<div id="sb-ga">Launching General Assembly profile...</div>
+		</div>
 	</div>
 </template>
