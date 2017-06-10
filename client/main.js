@@ -121,27 +121,18 @@ if (Meteor.isClient) {
 		//copy to clipboard button on the email face of the rotating cube
 		new Clipboard('.btn2');
 
-		// Docs at http://simpleweatherjs.com
-
-		/* Does your browser support geolocation? */
 		if ("geolocation" in navigator) {
 			$('.js-geolocation').show();
 		} else {
 			$('.js-geolocation').hide();
 		}
 
-		/* Where in the world are you? */
 		$('.js-geolocation').on('click', function () {
 			navigator.geolocation.getCurrentPosition(function (position) {
 				loadWeather(position.coords.latitude + ',' + position.coords.longitude); //load weather using your lat/lng coordinates
 			});
 		});
 
-		/* 
-		* Test Locations
-		* Austin lat/long: 30.2676,-97.74298
-		* Austin WOEID: 2357536
-		*/
 		$(document).ready(function () {
 			loadWeather('Kansas City', ''); //@params location, woeid
 		});
@@ -185,14 +176,6 @@ if (Meteor.isClient) {
 
 	Template.Contact.onCreated(function () {
 		new Clipboard('.btn');
-		// We can use the `ready` callback to interact with the map API once the map is ready.
-		GoogleMaps.ready('map', function (map) {
-			// Add a marker to the map once it's ready
-			// var marker = new google.maps.Marker({
-			//   position: map.options.center,
-			//   map: map.instance
-			// });
-		});
 	});
 
 	Template.Contact.events({
@@ -211,17 +194,6 @@ if (Meteor.isClient) {
 	});
 
 	Template.Timeline.onRendered(function () {
-
-		// this.$('.').hover(function () {
-		// 	$('#bbytes-logo').css('transition', 'all 0.5s');
-		// 	$('#bbytes-logo').css('visibility', 'visible');
-		// 	$('#bbytes-logo').css('transform', 'translateX(0px)');
-		// }, function () {
-		// 	// on mouseout, reset the background colour
-		// 	$('#bbytes-logo').css('visibility', '');
-		// 	$('#bbytes-logo').css('transform', '');
-		// });
-
 		this.$('#bbytes').hover(function () {
 			$('#bbytes-logo').css('transition', 'all 0.5s');
 			$('#bbytes-logo').css('visibility', 'visible');
@@ -246,7 +218,6 @@ if (Meteor.isClient) {
 			$('#ciq-logo').css('visibility', 'visible');
 			$('#ciq-logo').css('transform', 'translateX(0px)');
 		}, function () {
-			// on mouseout, reset the background colour
 			$('#ciq-logo').css('visibility', '');
 			$('#ciq-logo').css('transform', '');
 		});
@@ -256,7 +227,6 @@ if (Meteor.isClient) {
 			$('#rlabs-logo').css('visibility', 'visible');
 			$('#rlabs-logo').css('transform', 'translateX(0px)');
 		}, function () {
-			// on mouseout, reset the background colour
 			$('#rlabs-logo').css('visibility', '');
 			$('#rlabs-logo').css('transform', '');
 		});
@@ -266,7 +236,6 @@ if (Meteor.isClient) {
 			$('#fdale-logo').css('visibility', 'visible');
 			$('#fdale-logo').css('transform', 'translateX(0px)');
 		}, function () {
-			// on mouseout, reset the background colour
 			$('#fdale-logo').css('visibility', '');
 			$('#fdale-logo').css('transform', '');
 		});
@@ -276,7 +245,6 @@ if (Meteor.isClient) {
 			$('#freelance-logo').css('visibility', 'visible');
 			$('#freelance-logo').css('transform', 'translateX(0px)');
 		}, function () {
-			// on mouseout, reset the background colour
 			$('#freelance-logo').css('visibility', '');
 			$('#freelance-logo').css('transform', '');
 		});
@@ -286,7 +254,6 @@ if (Meteor.isClient) {
 			$('#ritntid-logo').css('visibility', 'visible');
 			$('#ritntid-logo').css('transform', 'translateX(0px)');
 		}, function () {
-			// on mouseout, reset the background colour
 			$('#ritntid-logo').css('visibility', '');
 			$('#ritntid-logo').css('transform', '');
 		});
@@ -296,7 +263,6 @@ if (Meteor.isClient) {
 			$('#scboces-logo').css('visibility', 'visible');
 			$('#scboces-logo').css('transform', 'translateX(0px)');
 		}, function () {
-			// on mouseout, reset the background colour
 			$('#scboces-logo').css('visibility', '');
 			$('#scboces-logo').css('transform', '');
 		});
@@ -306,7 +272,6 @@ if (Meteor.isClient) {
 			$('#ouboces-logo').css('visibility', 'visible');
 			$('#ouboces-logo').css('transform', 'translateX(0px)');
 		}, function () {
-			// on mouseout, reset the background colour
 			$('#ouboces-logo').css('visibility', '');
 			$('#ouboces-logo').css('transform', '');
 		});
@@ -408,10 +373,8 @@ if (Meteor.isClient) {
 	Template.HappinessCalculator.onRendered(function () {
 		$("#slider-salary").slider({
 			value: 50000,
-			// range: true,
 			min: 1000,
 			max: 500000,
-			// values: [ 50000, 70000 ],
 			slide: function (event, ui) {
 				$("#user-salary").val("$" + ui.value);
 				// $( "#user-salary" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
