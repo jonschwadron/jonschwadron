@@ -47,3 +47,10 @@
 	 -o-filter: grayscale(100%);
 		filter: grayscale(100%);
 }
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}

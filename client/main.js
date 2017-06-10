@@ -195,6 +195,17 @@ if (Meteor.isClient) {
 		});
 	});
 
+	Template.Contact.events({
+		'click .btn'() {
+			var email = document.getElementById("sb-email");
+			email.className = "show";
+			setTimeout(
+				function () {
+					email.className = email.className.replace("show", "");
+				}, 3000);
+		}
+	});
+
 	Template.Contact.onRendered(function () {
 		GoogleMaps.load({ key: 'AIzaSyBO04ekYQ1HfR856AIU3HLvsljXDIGMF0c' });
 	});
