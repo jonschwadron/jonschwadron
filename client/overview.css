@@ -289,3 +289,10 @@
     from {bottom: 100px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
 }
+
+#chart {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}	

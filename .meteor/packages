@@ -20,10 +20,12 @@ shell-server@0.2.3            # Server-side component of the `meteor shell` comm
 autopublish@1.0.7             # Publish all data to the clients (for prototyping)
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping)
 iron:router
-jquery@1.11.10
 fortawesome:fontawesome
 dburles:google-maps
 zenorocha:clipboard
 http@1.2.12
 session@1.1.7
 dynamic-import
+velocityjs:velocityjs
+joshdellay:jquery-mobile-menu
+d3js:d3

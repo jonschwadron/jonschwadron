@@ -14,7 +14,6 @@ Template.Airbnb.onRendered(function(){
 });
 
 Template.Airbnb.helpers({
-
 	showListing: function() {
 		return Session.get('listingInfoState');
 	},
@@ -36,25 +35,30 @@ Template.Airbnb.helpers({
 			sum += parseInt(item.price);
 		});
 
-		let total = Math.ceil((sum + listingPrice) / 15)
+		let total = Math.ceil((sum + listingPrice + cleaningFee) / guests)
 
 		return total;
 	},
 	listingPrice() {
 		return Session.get('price');
 	},
+    cleaningFee() {
+		return Session.get('cleaningFee');
+	},
+    nights() {
+        nights = $("#numOfNights").val()
+        return nights;
+    },
+    guests() {
+        guests = $("#numOfGuests").val()
+        return guests;
+    },
 	individualRoomPrice() {
 		return Math.ceil( total / 15);
 	}
 });
 
 Template.Airbnb.events({
-	'focus #from': function() {
-		$("#from").datepicker();
-	},
-	'focus #to': function() {
-		$("#to").datepicker();
-	},
 	'click #listing-toggle': function() {
 		if (Session.get('listingInfoState')) {
 			Session.set('listingInfoState', false);
@@ -95,6 +99,7 @@ Template.Airbnb.events({
 				console.log(result.listing.cleaning_fee_native);
 				Session.set({
 					price: result.listing.price,
+                    cleaningFee: result.listing.cleaning_fee_native,
 				});
 			});
 		}
@@ -122,9 +127,35 @@ Template.Airbnb.events({
 		target.text.value = '';
 		target.price.value = '';
 	},
-	'click #generate-button'() {
-		console.log("[ #generate-button clicked. ]");
+	'click #calculate-button'() {
+		const target = event.target;
+		const listing = target.listing.value;
+
+		var a = document.createElement('a');
+		a.href = listing;
+
+		var path = a['pathname'].split('/');
+		var listingId = '';
+
+		if (path.length > 3) {
+			listingId = path[3];
+		} else {
+			listingId = path[2];
+		}
+
+		if (Meteor.isClient) {
+			Meteor.call('getListing', listingId, function(error, result) {
+                console.log(result);
+				console.log(result.listing.cleaning_fee_native);
+				Session.set({
+					price: result.listing.price,
+                    cleaningFee: result.listing.cleaning_fee_native,
+				});
+			});
+		}
+
+		Session.set('listingInfoState', true);
+		//target.listing.value = '';
+		console.log("[ #calculate-button clicked. ]");
 	},
 });
-
-console.log("airbnb.js loaded");

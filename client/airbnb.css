@@ -2,6 +2,20 @@
     color: rgb(190, 190, 190);
 }
 
+.guests_label,
+.nights_label {
+    height: 35px;
+}
+
+#numOfGuests,
+#numOfNights {
+    width: 40px;
+    text-align: center;
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+}
+
 .item {
 	width: 310px;
 	margin: 0 auto;
@@ -142,6 +156,7 @@ button.delete {
 	text-align: right;
 }
 
+#calculate-button,
 #generate-button {
 	padding: 9px 20px 9px 20px;
 	text-align: center;

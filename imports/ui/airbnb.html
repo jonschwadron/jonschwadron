@@ -27,7 +27,7 @@
         				<form class="new-listing">
         					<input id="input-search" type="text" name="listing" placeholder="paste airbnb url" /><i id="icon-search" class="fa fa-search" aria-hidden="true"></i>
         				</form>
-                        <div id="hint-url"><i>eg: https://www.airbnb.com/rooms/1415908</i></div>
+                        <div id="hint-url"><i>example: https://www.airbnb.com/rooms/1415908</i></div>
         			</div>
         		</div>
 
@@ -46,7 +46,16 @@
         						<label class="list-label" for="to">Check Out</label>
         						<input type="text" id="to" placeholder="mm/dd/yyyy">
         					</div> -->
-        					<div class="guest_label">
+                            <div class="nights_label">
+        						<label class="list-label" for="numberOfNights">How many nights</label>
+                                <input type="text" id="numOfNights">
+        					</div>
+                            <div class="guests_label">
+        						<label class="list-label" for="numberOfGuests">How many guests</label>
+                                <input type="text" id="numOfGuests">
+        					</div>
+
+        					<!-- <div class="guest_label">
         						<label class="list-label" for="guests-selector">Guests</label>
         						<select name="numberOfGuests" class="arrow" id="guests-selector">
         							<option value="1">1</option>
@@ -71,14 +80,13 @@
                                     <option value="16">20</option>
         						</select>
         						<div class="arrow"></div>
-        					</div>
+        					</div> -->
         				</li>
-        				<li class="listing-list">{{ listingPrice }} x Number of nights<div class="line"></div></li>
-        				<li class="listing-list">Cleaning fee<div class="line"></div></li>
-        				<li class="listing-list">Total<div class="line"></div></li>
+        				<li class="listing-list">Listing: {{ listingPrice }}<div class="line"></div></li>
+        				<li class="listing-list">Cleaning fee: {{ cleaningFee }}<div class="line"></div></li>
         			</ul>
-        			<div id="generate-button">
-        				Request to Book
+        			<div id="calculate-button">
+        				Calculate
         			</div>
         			{{/if}}
         		</div>

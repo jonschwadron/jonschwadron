@@ -7,5 +7,3 @@ Template.expense.events({
 		Expenses.remove(this._id);
 	},
 });
-
-console.log("expense.js loaded");

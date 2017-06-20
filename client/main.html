@@ -5,8 +5,10 @@
 </head>
 
 <body>
-	{{> Header}}
-	{{> Footer}}
+	<div id="my-page">
+		{{> Header}}
+		{{> Footer}}
+	</div>
 </body>
 
 <template name="Header">
@@ -29,5 +31,5 @@
 </template>
 
 <template name="Footer">
-	<div class="footer">Powered by <a href="https://www.meteor.com/" target="_blank">Meteor</a> | Hosted on <a href="https://www.heroku.com/home" target="_blank">Heroku</a> | 2017 @ jonschwadron.com</div>
+	<div class="footer">Powered by <a href="https://www.meteor.com/" target="_blank">Meteor</a> | Hosted on <a href="https://www.heroku.com/home" target="_blank">Heroku</a> | jonschwadron.com 2017</div>
 </template>
