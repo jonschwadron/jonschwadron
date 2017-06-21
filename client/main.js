@@ -348,9 +348,9 @@ if (Meteor.isClient) {
 					// color: d3.scale.category10()
 					color: d3.scale.linear().domain([1, length])
 						.interpolate(d3.interpolateHcl)
-						.range([d3.rgb("#007AFF"), d3.rgb('#C6072F')])
+						.range([d3.rgb("#007AFF"), d3.rgb('#FF3F34')])
 				};
-
+				
 				if ('undefined' !== typeof options) {
 					for (var i in options) {
 						if ('undefined' !== typeof options[i]) {
