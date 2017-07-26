@@ -82,6 +82,10 @@ Router.route('/django-rating-system', function () {
 	this.render('DjangoRatingSystem');
 });
 
+Router.route('/tictactoeonline', function () {
+	this.render('TicTacToeOnline');
+});
+
 
 
 
