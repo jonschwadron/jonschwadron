@@ -62,8 +62,8 @@ if (Meteor.isClient) {
                         return Date.parse(a) - Date.parse(b);
                     });
     
-                    var earliestDate = rssData.dates[rssData.dates.length - 1];
-                    var latestDate = rssData.dates[0];
+                    var latestDate = rssData.dates[rssData.dates.length - 1];
+                    var earliestDate = rssData.dates[0];
     
                     $('#report').append(`
                         <li>Number of articles: ` + articleCount + `</li>
