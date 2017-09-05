@@ -13,13 +13,20 @@ import '../imports/api/typed.js';
 import '../imports/ui/airbnb.js';
 
 import './main.html';
+import './rssfeed.js';
+
 
 // Router.configure({
 // 	layoutTemplate: 'Header'  //can be any template name
 // });
 
+
 Router.route('/', function () {
 	this.render('Overview');
+});
+
+Router.route('/rssfeed', function () {
+	this.render('RssFeed');
 });
 
 Router.route('/resume', function () {
@@ -119,7 +126,12 @@ if (Meteor.isClient) {
 	// 		document.body.style.backgroundColor = "white";
 	// 	}
 	// });
+	Template.RssFeed.onRendered(function () {
+        $(document).ready(function(){
 
+        });
+	});
+	
 	Template.Overview.events({
 		'click #emailcopiednotify'() {
 			var email = document.getElementById("sb-email");
