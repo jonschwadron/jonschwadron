@@ -1,18 +1,23 @@
 <template name="RssFeed">
   <div id="rss">
-    <h1>RSS Feed</h1>
+    <h1>RSS Feed Reader</h1>
 
     <div id="link">
       <form id="input-form">
         <input id="input-feed" type="text" name="rssInput" placeholder="insert rss link" /><i id="icon-magnifyingGlass" class="fa fa-search" aria-hidden="true"></i>
       </form>
-      <div id="hint-url"><i>example: https://www.nasa.gov/rss/dyn/breaking_news.rss</i></div>
+      <div id="exampleUrls">or select one of these: 
+        <span class="examples">https://www.nasa.gov/rss/dyn/breaking_news.rss</span>
+        <span class="examples">http://rss.cnn.com/rss/cnn_topstories.rss</span>
+        <span class="examples">https://www.technologyreview.com/topnews.rss</span>
+      </div>
+
     </div>
 
     <div id="overview">
-        <h1 id="title"></h1>
-        <h3>Overview Report</h3>
-        <ul id="report"></ul>
+      <h1 id="title"></h1>
+      <h3>Overview Report</h3>
+      <ul id="report"></ul>
     </div>
     <div id="articles">
         <h3>Articles</h3>
