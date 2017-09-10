@@ -26,7 +26,6 @@ if (Meteor.isClient) {
                         </li>
                     `);
                 }
-                
             }
 
             //display overview
@@ -52,6 +51,8 @@ if (Meteor.isClient) {
                 }
                 var earliestDate = data.dates[data.dates.length - 1];
                 var latestDate = data.dates[0];
+
+                //remove seconds from string with momentjs
                 earliestDate = moment().format('YYYY-MM-DD hh:mm');
                 latestDate = moment().format('YYYY-MM-DD hh:mm');
 
@@ -81,7 +82,6 @@ if (Meteor.isClient) {
                     }
 
                     rssData = response;
-                    console.log(rssData);
 
                     //force sort starting with latest article
                     rssData.items.sort(function(a, b){
@@ -90,12 +90,11 @@ if (Meteor.isClient) {
 
                     pumpOutTheContentData(rssData);
                     pumpOutTheOverviewData(rssData);
-                    $('#articles').show();
-                    $('#overview').show();
+                    $('#result').show();
                 });
             } 
 
-            //load contents from rss link
+            //load rss content from input box
             $('#input-form').submit(function (event){
                 event.preventDefault();
                 var target = event.target,
@@ -103,6 +102,7 @@ if (Meteor.isClient) {
                 ajaxCall(input);
             });
 
+            //load rss content from preset
             $('.examples').click(function (){
                 var selectedRSS = $(this).text();
                 ajaxCall(selectedRSS);
