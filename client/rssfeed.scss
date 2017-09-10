@@ -90,10 +90,13 @@
                 box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.7);
     
                 .thumbnailBox {
-                    width: 100%;
-                    height: auto;
                     border-top-left-radius: 5px;
                     border-top-right-radius: 5px;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                    }
                 }
 
                 .dateBox {
@@ -114,7 +117,12 @@
     
                 .titleBox {
                     padding: 15px 15px 0 15px;
-                    font-weight: 600;
+                    font-weight: 700;
+
+                    a {
+                        color: black;
+                        text-decoration: none;
+                    }
                 }
     
                 .descriptionBox {
