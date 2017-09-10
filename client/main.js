@@ -126,11 +126,6 @@ if (Meteor.isClient) {
 	// 		document.body.style.backgroundColor = "white";
 	// 	}
 	// });
-	Template.RssFeed.onRendered(function () {
-        $(document).ready(function(){
-
-        });
-	});
 	
 	Template.Overview.events({
 		'click #emailcopiednotify'() {
