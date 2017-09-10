@@ -48,6 +48,25 @@
 
         #sortOptions {
             padding-left: 2px;
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+
+            #sortByDateAsc,
+            #sortByTitleAsc,
+            #sortByDescriptionAsc {
+                cursor: pointer;
+            }
+
+            #sortByDateDesc,
+            #sortByTitleDesc,
+            #sortByDescriptionDesc {
+                display: none;
+                cursor: pointer;
+            }  
         }
 
         #content {
@@ -57,29 +76,49 @@
             padding-left: 2px;
     
             li {
+                position: relative;
                 background-color:#F0FFFF;
                 margin: 14px 14px 0 0;
                 max-width: 300px;
-                padding: 15px;
+                padding: 0 0 15px 0;
                 border: 1px solid rgba(0,0,0,0.3);
-                -webkit-border-radius: 5px;
-                -moz-border-radius: 5px;
-                border-radius: 5px;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                border-radius: 6px;
                 -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.7);
                 -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.7);
                 box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.7);
     
                 .thumbnailBox {
-                    width: 265px;
-                    height: 150px;
+                    width: 100%;
+                    height: auto;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                }
+
+                .dateBox {
+                    position: absolute;
+                    width: 100%;
+                    text-align: right;
+                    color: white;
+                    padding: 0 15px 0 15px;
+                    background-color: #0998b6;
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 5px;
+                    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.7);
+                    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.7);
+                    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.2);
+
+
                 }
     
                 .titleBox {
-                    padding: 6px;
+                    padding: 15px 15px 0 15px;
+                    font-weight: 600;
                 }
     
                 .descriptionBox {
-                    padding: 6px;
+                    padding: 5px 15px 0 15px;
                 }
                 
             }
