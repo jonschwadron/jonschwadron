@@ -11,9 +11,15 @@ if (Meteor.isClient) {
                     var item = data.items[i];
                     var shortDescription = item.description.substring(0, 200); 
 
+                    //using momentjs to reformat date string
+                    //installed momentjs pacakge for meteor via command line:
+                    //meteor add momentjs:moment
+                    //see documentation at https://momentjs.com/docs/#/displaying/
+                    var fancyDate = moment(item.pubDate).format('MMMM Do YYYY h:mm a');
+
                     $('#content').append(`
                         <li>
-                            <span class="dateBox">` + item.pubDate + `</span>
+                            <span class="dateBox">` + fancyDate + `</span>
                             <div class="thumbnailBox"><img src="` + item.enclosure.link + `"/></div>
                             <div class="titleBox"><a href="` + item.link + `">` + item.title + `</a></div>
                             <div class="descriptionBox">` + shortDescription + `</div>
@@ -46,6 +52,9 @@ if (Meteor.isClient) {
                 }
                 var earliestDate = data.dates[data.dates.length - 1];
                 var latestDate = data.dates[0];
+                earliestDate = moment().format('YYYY-MM-DD hh:mm');
+                latestDate = moment().format('YYYY-MM-DD hh:mm');
+
 
                 $('#report').append(`
                     <li>Number of articles: ` + data.items.length + `</li>
@@ -64,7 +73,7 @@ if (Meteor.isClient) {
                     data: {
                         rss_url: data,
                         api_key: 'dcyulzglkxpltzz1ndyv9niqjnlfxc6bdtq0gqbq',
-                        count: 60
+                        count: 100
                     }
                 }).done(function (response) {
                     if(response.status != 'ok') { 
@@ -73,6 +82,11 @@ if (Meteor.isClient) {
 
                     rssData = response;
                     console.log(rssData);
+
+                    //force sort starting with latest article
+                    rssData.items.sort(function(a, b){
+                        return Date.parse(b.pubDate) - Date.parse(a.pubDate);
+                    });
 
                     pumpOutTheContentData(rssData);
                     pumpOutTheOverviewData(rssData);
@@ -169,7 +183,5 @@ if (Meteor.isClient) {
 
 // TODO:
 // optimize for mobile
-// optimize design
 // add first letter of title into the thumbnail box for articles without images
-// fix date format in cards
 // ditch 3rd party rssfeed service and parse your own with jquery

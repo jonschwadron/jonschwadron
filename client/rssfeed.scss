@@ -37,6 +37,7 @@
             .examples {
                 font-size: 12px;
                 padding: 4px;
+                line-height: 2;
                 color: white;
                 background-color: #FF4040;
                 border-radius: 5px;
@@ -118,9 +119,10 @@
                 .dateBox {
                     position: absolute;
                     width: 100%;
+                    font-size: 12px;
                     text-align: right;
                     color: white;
-                    padding: 0 15px 0 15px;
+                    padding: 3px 7px 2px 0;
                     background-color: #FF4040;
                     border-top-right-radius: 5px;
                     border-top-left-radius: 5px;
