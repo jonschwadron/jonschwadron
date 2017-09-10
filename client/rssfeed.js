@@ -1,6 +1,8 @@
 if (Meteor.isClient) {
     Template.RssFeed.onRendered(function () {
         $(document).ready(function(){
+            //temporary disable the navigation menu
+            $('.stickymenu').hide();
 
             var rssData = null;
 
