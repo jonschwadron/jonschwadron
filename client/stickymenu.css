@@ -1,7 +1,7 @@
 /* The sticky menu */
 .stickymenu {
 	position: fixed;
-	width: 100px;
+	width: 45px;
 	z-index: 9000;
 }
 

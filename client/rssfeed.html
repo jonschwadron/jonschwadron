@@ -1,20 +1,22 @@
 <template name="RssFeed">
   <div id="rss">
     <h1>RSS Feed</h1>
-    <form id="input-form">
-      <input id="input-feed" type="text" name="rssInput" placeholder="rss link" /><i id="icon-magnifyingGlass" class="fa fa-search" aria-hidden="true"></i>
-    </form>
-    <div id="hint-url"><i>example: https://www.nasa.gov/rss/dyn/breaking_news.rss</i></div>
 
-    <h1 id="title"></h1>
-    
+    <div id="link">
+      <form id="input-form">
+        <input id="input-feed" type="text" name="rssInput" placeholder="insert rss link" /><i id="icon-magnifyingGlass" class="fa fa-search" aria-hidden="true"></i>
+      </form>
+      <div id="hint-url"><i>example: https://www.nasa.gov/rss/dyn/breaking_news.rss</i></div>
+    </div>
+
     <div id="overview">
-        <h3>Overview Report:</h3>
+        <h1 id="title"></h1>
+        <h3>Overview Report</h3>
         <ul id="report"></ul>
     </div>
     <div id="articles">
         <h3>Articles</h3>
-        <div>sort by: <span id="sortByDate">date</span> | <span id="sortByTitle">title</span> | <span id="sortByDescription">description</span></div>
+        <div id="sortOptions">sort by <span id="sortByDate">date</span> | <span id="sortByTitle">title</span> | <span id="sortByDescription">description</span></div>
         <ul id="content"></ul>
     </div>
   </div>  

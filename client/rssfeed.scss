@@ -1,54 +1,66 @@
 #rss {
-    padding: 100px;
+    padding: 50px;
 
-    .input-form input {
-        height: 20px;
-        border: 1px solid rgba(0,0,0,0.1);
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
-        padding-left: 5px;
-    }
-
-    #input-feed {
-        width: 100%;
-        height: 38px;
-        padding-left: 30px;
-    }
-
-    ::-webkit-input-placeholder {color: lightgrey;}
-    ::-moz-placeholder {color: lightgrey;}
-    :-ms-input-placeholder {color: lightgrey;}
-    :-moz-placeholder {color: lightgrey;}
-
-    #icon-magnifyingGlass {
-        position: relative;
-        float: left;
-        top: -27px;
-        left: 10px;
-    }
-
-    #hint-url {
-        color: rgba(0,0,0,0.25);
+    #link {
+        #input-feed {
+            width: 100%;
+            height: 38px;
+            border: 1px solid rgba(0,0,0,0.1);
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            padding-left: 35px;
+        }
+    
+        ::-webkit-input-placeholder {color: lightgrey;}
+        ::-moz-placeholder {color: lightgrey;}
+        :-ms-input-placeholder {color: lightgrey;}
+        :-moz-placeholder {color: lightgrey;}
+    
+        #icon-magnifyingGlass {
+            position: relative;
+            float: left;
+            top: -26px;
+            left: 12px;
+        }
+    
+        #hint-url {
+            color: rgba(0,0,0,0.25);
+        }
     }
 
     #overview {
         display: none;
+        padding: 10px 0 10px 0;
+
+        h1 {
+            margin-top: 0;
+        }
+
+        #report {
+            padding-left: 2px;
+        }
     }
 
     #articles {
         display: none;
+        padding: 10px 0 10px 0;
+
+        #sortOptions {
+            padding-left: 2px;
+        }
 
         #content {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            padding-left: 2px;
     
             li {
                 background-color:#F0FFFF;
-                margin: 20px;
-                max-width: 250px;
-                padding: 25px;
+                margin: 14px 14px 0 0;
+                max-width: 300px;
+                padding: 15px;
                 border: 1px solid rgba(0,0,0,0.3);
                 -webkit-border-radius: 5px;
                 -moz-border-radius: 5px;
@@ -58,7 +70,7 @@
                 box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.7);
     
                 .thumbnailBox {
-                    width: 150px;
+                    width: 265px;
                     height: 150px;
                 }
     

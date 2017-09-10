@@ -2,8 +2,7 @@ if (Meteor.isClient) {
     
     Template.RssFeed.onRendered(function () {
         $(document).ready(function(){
-            $('body').css({"background-color": "#98dafc"});
-
+            
 
             var rssData = {
                 items: [],
@@ -13,8 +12,8 @@ if (Meteor.isClient) {
             $('#input-form').submit(function (event){
                 event.preventDefault();
 
-                const target = event.target;
-                const input = target.rssInput.value;
+                var target = event.target,
+                    input = target.rssInput.value;
     
                 var articleCount = 0,
                     articleImageCount = 0;
@@ -25,7 +24,8 @@ if (Meteor.isClient) {
                     dataType: 'json',
                     data: {
                         rss_url: input,
-                        api_key: 'dcyulzglkxpltzz1ndyv9niqjnlfxc6bdtq0gqbq'
+                        api_key: 'dcyulzglkxpltzz1ndyv9niqjnlfxc6bdtq0gqbq',
+                        count: 100
                     }
                 }).done(function (response) {
                     if(response.status != 'ok') { 
