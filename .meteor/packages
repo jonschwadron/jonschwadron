@@ -32,3 +32,4 @@ d3js:d3
 fourseven:scss
 jquery@1.11.10
 poetic:materialize-scss
+momentjs:moment
