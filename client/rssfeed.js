@@ -11,7 +11,7 @@ if (Meteor.isClient) {
                     $('#content').append(`
                         <li>
                             <span class="dateBox">` + item.pubDate + `</span>
-                            <img class="thumbnailBox" src="` + item.enclosure.link + `"/>
+                            <div class="thumbnailBox"><img src="` + item.enclosure.link + `"/></div>
                             <div class="titleBox"><a href="` + item.link + `">` + item.title + `</a></div>
                             <div class="descriptionBox">` + shortDescription + `</div>
                         </li>
@@ -56,11 +56,16 @@ if (Meteor.isClient) {
                     pumpOutTheContentData(rssData);
                     
                     //find the earliest and latest dates
+                    //find number of articles with images
                     for(var i in rssData.items){ 
                         var item = rssData.items[i];
-                        if (item.pubDate != '') {
+                        if (item.pubDate != '' && item.pubDate != null) {
                             rssData.dates.push(item.pubDate);
                         }
+
+                        if (item.enclosure.link != '' && item.enclosure.link != null) {
+                            articleImageCount++;
+                        } 
                     }
                     var earliestDate = rssData.dates[rssData.dates.length - 1];
                     var latestDate = rssData.dates[0];
@@ -77,6 +82,7 @@ if (Meteor.isClient) {
                 });
             });
 
+            //sorting
             $('#sortByDateAsc').click(function(){
                 rssData.items.sort(function(a, b){
                     return Date.parse(a.pubDate) - Date.parse(b.pubDate);
@@ -150,7 +156,6 @@ if (Meteor.isClient) {
 }
 
 // TODO:
-// Sort by date, title, description in ascending and descending order
 // optimize for mobile
 // optimize design
 // add first letter of title into the thumbnail box for articles without images
