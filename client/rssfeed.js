@@ -1,9 +1,12 @@
 if (Meteor.isClient) {
-    
     Template.RssFeed.onRendered(function () {
         $(document).ready(function(){
 
+            var rssData = null;
+
+            //display content from articles
             function pumpOutTheContentData(data) {
+                $('#content').html('');
                 for(var i in data.items){
                     var item = data.items[i];
                     var shortDescription = item.description.substring(0, 200); 
@@ -17,24 +20,49 @@ if (Meteor.isClient) {
                         </li>
                     `);
                 }
+                
             }
 
-            var rssData = null;
-
-            $('#input-form').submit(function (event){
-                event.preventDefault();
-
-                var target = event.target,
-                    input = target.rssInput.value;
-    
+            //display overview
+            function pumpOutTheOverviewData(data) {
+                $('#report').html('');
+                data.dates = [];
                 var articleImageCount = 0;
 
+                //title of source
+                $('#title').html(data.feed.title);
+                
+                //find the earliest and latest dates
+                //find number of articles with images
+                for(var i in data.items){ 
+                    var item = data.items[i];
+                    if (item.pubDate != '' && item.pubDate != null) {
+                        data.dates.push(item.pubDate);
+                    }
+
+                    if (item.enclosure.link != '' && item.enclosure.link != null) {
+                        articleImageCount++;
+                    } 
+                }
+                var earliestDate = data.dates[data.dates.length - 1];
+                var latestDate = data.dates[0];
+
+                $('#report').append(`
+                    <li>Number of articles: ` + data.items.length + `</li>
+                    <li>Number of articles with images: ` + articleImageCount + `</li>
+                    <li>Earliest published date: ` + earliestDate + `</li>
+                    <li>Latest published date: ` + latestDate + `</li>
+                `);
+            }
+
+            //ajax call
+            function ajaxCall(data) {
                 $.ajax({
                     url: 'https://api.rss2json.com/v1/api.json',
                     method: 'GET',
                     dataType: 'json',
                     data: {
-                        rss_url: input,
+                        rss_url: data,
                         api_key: 'dcyulzglkxpltzz1ndyv9niqjnlfxc6bdtq0gqbq',
                         count: 60
                     }
@@ -46,52 +74,35 @@ if (Meteor.isClient) {
                     rssData = response;
                     console.log(rssData);
 
-                    $('#title').html(rssData.feed.title);
-
-                    //append reset
-                    $('#report').html('');
-                    $('#content').html('');
-                    rssData.dates = [];
-
                     pumpOutTheContentData(rssData);
-                    
-                    //find the earliest and latest dates
-                    //find number of articles with images
-                    for(var i in rssData.items){ 
-                        var item = rssData.items[i];
-                        if (item.pubDate != '' && item.pubDate != null) {
-                            rssData.dates.push(item.pubDate);
-                        }
-
-                        if (item.enclosure.link != '' && item.enclosure.link != null) {
-                            articleImageCount++;
-                        } 
-                    }
-                    var earliestDate = rssData.dates[rssData.dates.length - 1];
-                    var latestDate = rssData.dates[0];
-    
-                    $('#report').append(`
-                        <li>Number of articles: ` + rssData.items.length + `</li>
-                        <li>Number of articles with images: ` + articleImageCount + `</li>
-                        <li>Earliest published date: ` + earliestDate + `</li>
-                        <li>Latest published date: ` + latestDate + `</li>
-                    `);
-    
-                    $('#overview').show();
+                    pumpOutTheOverviewData(rssData);
                     $('#articles').show();
+                    $('#overview').show();
                 });
+            } 
+
+            //load contents from rss link
+            $('#input-form').submit(function (event){
+                event.preventDefault();
+                var target = event.target,
+                    input = target.rssInput.value;
+                ajaxCall(input);
             });
 
-            //sorting
+            $('.examples').click(function (){
+                var selectedRSS = $(this).text();
+                ajaxCall(selectedRSS);
+            });
+
+            //sorting in ascending order
             $('#sortByDateAsc').click(function(){
                 rssData.items.sort(function(a, b){
                     return Date.parse(a.pubDate) - Date.parse(b.pubDate);
                 });
-                $('#content').html('');
+
                 pumpOutTheContentData(rssData);
                 $('#sortByDateAsc').hide();
                 $('#sortByDateDesc').show();
-
             });
 
             $('#sortByTitleAsc').click(function(){
@@ -100,7 +111,7 @@ if (Meteor.isClient) {
                     if(a.title > b.title) return 1;
                     return 0;
                 });
-                $('#content').html('');
+
                 pumpOutTheContentData(rssData);
                 $('#sortByTitleAsc').hide();
                 $('#sortByTitleDesc').show();
@@ -112,17 +123,18 @@ if (Meteor.isClient) {
                     if(a.description > b.description) return 1;
                     return 0;
                 });
-                $('#content').html('');
+
                 pumpOutTheContentData(rssData);
                 $('#sortByDescriptionAsc').hide();
                 $('#sortByDescriptionDesc').show();
             });
 
+            //sorting in descending order
             $('#sortByDateDesc').click(function(){
                 rssData.items.sort(function(a, b){
                     return Date.parse(b.pubDate) - Date.parse(a.pubDate);
                 });
-                $('#content').html('');
+
                 pumpOutTheContentData(rssData);
                 $('#sortByDateDesc').hide();
                 $('#sortByDateAsc').show();
@@ -134,7 +146,7 @@ if (Meteor.isClient) {
                     if(a.title > b.title) return -1;
                     return 0;
                 });
-                $('#content').html('');
+
                 pumpOutTheContentData(rssData);
                 $('#sortByTitleDesc').hide();
                 $('#sortByTitleAsc').show();
@@ -146,7 +158,7 @@ if (Meteor.isClient) {
                     if(a.description > b.description) return -1;
                     return 0;
                 });
-                $('#content').html('');
+
                 pumpOutTheContentData(rssData);
                 $('#sortByDescriptionDesc').hide();
                 $('#sortByDescriptionAsc').show();
