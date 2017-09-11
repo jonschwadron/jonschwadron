@@ -63,8 +63,8 @@ if (Meteor.isClient) {
                         articleImageCount++;
                     } 
                 }
-                var earliestDate = data.dates[data.dates.length - 1];
-                var latestDate = data.dates[0];
+                var earliestDate = data.dates[0];
+                var latestDate = data.dates[data.dates.length - 1];
 
                 //remove seconds from string with momentjs
                 earliestDate = moment(earliestDate).format('YYYY-MM-DD hh:mm');
@@ -98,9 +98,9 @@ if (Meteor.isClient) {
                     rssData = response;
                     console.log(rssData);
 
-                    //force sort starting with latest article
+                    //sort by date in descending order (most recent) as default
                     rssData.items.sort(function(a, b){
-                        return Date.parse(b.pubDate) - Date.parse(a.pubDate);
+                        return moment(b.pubDate) - moment(a.pubDate);
                     });
 
                     pumpOutTheContentData(rssData);
@@ -126,7 +126,7 @@ if (Meteor.isClient) {
             //sorting in ascending order
             $('#sortByDateAsc').click(function(){
                 rssData.items.sort(function(a, b){
-                    return Date.parse(a.pubDate) - Date.parse(b.pubDate);
+                    return moment(a.pubDate) - moment(b.pubDate);
                 });
 
                 pumpOutTheContentData(rssData);
@@ -161,7 +161,7 @@ if (Meteor.isClient) {
             //sorting in descending order
             $('#sortByDateDesc').click(function(){
                 rssData.items.sort(function(a, b){
-                    return Date.parse(b.pubDate) - Date.parse(a.pubDate);
+                    return moment(b.pubDate) - moment(a.pubDate);
                 });
 
                 pumpOutTheContentData(rssData);
