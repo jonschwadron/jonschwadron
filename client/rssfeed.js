@@ -21,12 +21,22 @@ if (Meteor.isClient) {
                     //see documentation at https://momentjs.com/docs/#/displaying/
                     var fancyDate = moment(item.pubDate).format('MMMM Do YYYY h:mm a');
 
+                    var fancyImageOrChar;
+
+                    if (item.enclosure.link != '' && item.enclosure.link != null) {
+                        fancyImageOrChar = '<div class="thumbnailBox"><img src="' + item.enclosure.link + '"/></div>';
+                    } else {
+                        fancyImageOrChar = '<div class="thumbnailBox"><div id="fancyChar">' + item.title.charAt(0) + '</div></div>';
+                    }
+
                     $('#content').append(`
                         <li>
-                            <span class="dateBox">` + fancyDate + `</span>
-                            <div class="thumbnailBox"><img src="` + item.enclosure.link + `"/></div>
-                            <div class="titleBox"><a href="` + item.link + `">` + item.title + `</a></div>
-                            <div class="descriptionBox">` + shortDescription + `</div>
+                            <a href="` + item.link + `" target="_blank">
+                                <span class="dateBox">` + fancyDate + `</span>
+                                ` + fancyImageOrChar + `
+                                <div class="titleBox">` + item.title + `</div>
+                                <div class="descriptionBox">` + shortDescription + `</div>
+                            </a>
                         </li>
                     `);
                 }
@@ -188,4 +198,4 @@ if (Meteor.isClient) {
 // TODO:
 // optimize for mobile
 // add first letter of title into the thumbnail box for articles without images
-// ditch 3rd party rssfeed service and parse your own with jquery
+// ditch 3rd party rssfeed service and parse your own with jquery https://stackoverflow.com/questions/226663/parse-rss-with-jquery
