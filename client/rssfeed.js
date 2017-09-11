@@ -96,6 +96,7 @@ if (Meteor.isClient) {
                     }
 
                     rssData = response;
+                    console.log(rssData);
 
                     //force sort starting with latest article
                     rssData.items.sort(function(a, b){
@@ -196,6 +197,6 @@ if (Meteor.isClient) {
 }
 
 // TODO:
-// optimize for mobile
-// add first letter of title into the thumbnail box for articles without images
-// ditch 3rd party rssfeed service and parse your own with jquery https://stackoverflow.com/questions/226663/parse-rss-with-jquery
+// sort by date seems wonky on iphone
+// ditch 3rd party rssfeed service and parse your own with jquery
+// see here: https://stackoverflow.com/questions/226663/parse-rss-with-jquery
