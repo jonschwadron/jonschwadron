@@ -13,7 +13,12 @@ if (Meteor.isClient) {
                 $('#content').html('');
                 for(var i in data.items){
                     var item = data.items[i];
+                    
+                    //shorten description to 200 characters. if middle of a word is cut off, shorten to the last whitespace in the string
                     var shortDescription = item.description.substring(0, 200); 
+                    shortDescription = shortDescription.substr(0, Math.min (
+                        shortDescription.length, shortDescription.lastIndexOf(' ')
+                    ));
 
                     //using momentjs to reformat date string
                     //installed momentjs pacakge for meteor via command line:
@@ -35,7 +40,7 @@ if (Meteor.isClient) {
                                 <span class="dateBox">` + fancyDate + `</span>
                                 ` + fancyImageOrChar + `
                                 <div class="titleBox">` + item.title + `</div>
-                                <div class="descriptionBox">` + shortDescription + `</div>
+                                <div class="descriptionBox">` + shortDescription + `... <strong>[read more]</strong></div>
                             </a>
                         </li>
                     `);
