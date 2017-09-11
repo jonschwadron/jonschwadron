@@ -4,6 +4,8 @@ if (Meteor.isClient) {
             //temporary disable the navigation menu
             $('.stickymenu').hide();
 
+            $('body').css('background-color', '#FF4040');
+
             var rssData = null;
 
             //display content from articles

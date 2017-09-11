@@ -1,17 +1,20 @@
 <template name="RssFeed">
   <div id="rss">
-    <h1>RSS Feed Reader</h1>
-
-    <div id="link">
-      <form id="input-form">
-        <input id="input-feed" type="text" name="rssInput" placeholder="insert rss link" /><i id="icon-magnifyingGlass" class="fa fa-search" aria-hidden="true"></i>
-      </form>
-      <div id="exampleUrls">or select one of these: 
-        <span class="examples">https://www.nasa.gov/rss/dyn/breaking_news.rss</span>
-        <span class="examples">http://rss.cnn.com/rss/cnn_topstories.rss</span>
-        <span class="examples">https://www.technologyreview.com/topnews.rss</span>
+    <div id="rss-section">
+      <h1>RSS Feed Reader</h1>
+      
+      <div id="link">
+        <form id="input-form">
+          <input id="input-feed" type="text" name="rssInput" placeholder="paste rss link here" /><i id="icon-magnifyingGlass" class="fa fa-search" aria-hidden="true"></i>
+        </form>
+        <div id="exampleUrls">or pick one of these 
+          <span class="examples">https://www.nasa.gov/rss/dyn/breaking_news.rss</span>
+          <span class="examples">http://rss.cnn.com/rss/cnn_topstories.rss</span>
+          <span class="examples">https://www.technologyreview.com/topnews.rss</span>
+        </div>
       </div>
     </div>
+
 
     <div id="result">
       <div id="overview">
@@ -21,14 +24,17 @@
         </div>
         <div id="articles">
             <h3>Articles</h3>
-            <div id="sortOptions">sort by
-              <span id="sortByDateAsc" title="Sort by date in ascending order">date <i class="fa fa-caret-up" aria-hidden="true"></i></span>
-              <span id="sortByDateDesc" title="Sort by date in descending order">date <i class="fa fa-caret-down" aria-hidden="true"></i></span> 
-              <span id="sortByTitleAsc" title="Sort by title in ascending order">title <i class="fa fa-caret-up" aria-hidden="true"></i></span>
-              <span id="sortByTitleDesc" title="Sort by title in descending order">title <i class="fa fa-caret-down" aria-hidden="true"></i></span> 
-              <span id="sortByDescriptionAsc" title="Sort by description in ascending order">description <i class="fa fa-caret-up" aria-hidden="true"></i></span>
-              <span id="sortByDescriptionDesc" title="Sort by description in descending order">description <i class="fa fa-caret-down" aria-hidden="true"></i></span>
+            <div id="sortBox">
+              <div id="sortOptions">sort by
+                  <span id="sortByDateAsc" title="Sort by date in ascending order">date <i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                  <span id="sortByDateDesc" title="Sort by date in descending order">date <i class="fa fa-caret-down" aria-hidden="true"></i></span> 
+                  <span id="sortByTitleAsc" title="Sort by title in ascending order">title <i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                  <span id="sortByTitleDesc" title="Sort by title in descending order">title <i class="fa fa-caret-down" aria-hidden="true"></i></span> 
+                  <span id="sortByDescriptionAsc" title="Sort by description in ascending order">description <i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                  <span id="sortByDescriptionDesc" title="Sort by description in descending order">description <i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                </div>
             </div>
+            
             <ul id="content"></ul>
         </div>
     </div>

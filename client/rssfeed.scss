@@ -1,6 +1,16 @@
 #rss {
-    padding: 0 5px 0 5px;
+    #rss-section {
+        padding: 50px 0 50px 0;
+        width: 65%;
+        margin: 0 auto;
+        background-color: #FF4040;
 
+        h1 {
+            color: white;
+            margin-top: 0;
+            text-shadow: 2px 2px rgba(0,0,0,0.5);
+        }
+    }
     #link {
         #input-feed {
             width: 100%;
@@ -10,6 +20,9 @@
             -moz-border-radius: 2px;
             border-radius: 2px;
             padding-left: 35px;
+            -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
+            -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
+            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
         }
     
         ::-webkit-input-placeholder {color: lightgrey;}
@@ -25,7 +38,9 @@
         }
 
         #exampleUrls {
+            color: white;
             padding-top: 5px;
+            text-shadow: 1px 1px rgba(0,0,0,0.7);
 
             -webkit-touch-callout: none; /* iOS Safari */
             -webkit-user-select: none; /* Safari */
@@ -35,22 +50,27 @@
             user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 
             .examples {
+                text-shadow: none;
                 font-size: 12px;
                 padding: 4px;
-                line-height: 2;
-                color: white;
-                background-color: #FF4040;
+                line-height: 2.5;
+                color: black;
+                background-color: white;
                 border-radius: 5px;
                 cursor: pointer;
+                -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
+                -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
+                box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.4);
             }
         }
     }
 
     #result {
         display: none;
+        background-color: white;
 
         #overview {
-            padding: 10px 0 10px 0;
+            padding: 50px 10px 50px 10px;
 
             h1 {
                 margin-top: 0;
@@ -63,42 +83,55 @@
 
         #articles {
             padding: 10px 0 10px 0;
+            
+            h3 {
+                width: 100%;
+                margin: 0;
+                color: white;
+                background-color: #FF4040;
+                padding: 4px 0 3px 10px;
+            }
 
-            #sortOptions {
-                padding-left: 2px;
-                -webkit-touch-callout: none; /* iOS Safari */
-                -webkit-user-select: none; /* Safari */
-                -khtml-user-select: none; /* Konqueror HTML */
-                -moz-user-select: none; /* Firefox */
-                -ms-user-select: none; /* Internet Explorer/Edge */
-                user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+            #sortBox {
+                width: 100%;
+                text-align: right;
+                padding: 4px 10px 3px 0;
 
-                #sortByDateAsc,
-                #sortByTitleAsc,
-                #sortByDescriptionAsc {
-                    cursor: pointer;
+                #sortOptions {
+                    -webkit-touch-callout: none; /* iOS Safari */
+                    -webkit-user-select: none; /* Safari */
+                    -khtml-user-select: none; /* Konqueror HTML */
+                    -moz-user-select: none; /* Firefox */
+                    -ms-user-select: none; /* Internet Explorer/Edge */
+                    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+    
+                    #sortByDateAsc,
+                    #sortByTitleAsc,
+                    #sortByDescriptionAsc {
+                        cursor: pointer;
+                    }
+    
+                    #sortByDateDesc,
+                    #sortByTitleDesc,
+                    #sortByDescriptionDesc {
+                        display: none;
+                        cursor: pointer;
+                    }  
                 }
-
-                #sortByDateDesc,
-                #sortByTitleDesc,
-                #sortByDescriptionDesc {
-                    display: none;
-                    cursor: pointer;
-                }  
             }
 
             #content {
+                padding: 0 10px 0 10px;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                padding-left: 2px;
         
                 li {
                     position: relative;
                     background-color:#F0FFFF;
                     margin: 14px 14px 0 0;
                     max-width: 300px;
-                    padding: 0 0 15px 0;
+                    
                     border: 1px solid rgba(0,0,0,0.3);
                     -webkit-border-radius: 6px;
                     -moz-border-radius: 6px;
@@ -127,8 +160,8 @@
                         background-color: #FF4040;
                         border-top-right-radius: 5px;
                         border-top-left-radius: 5px;
-                        -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.7);
-                        -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.7);
+                        -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+                        -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
                         box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.2);
                     }
         
@@ -151,3 +184,24 @@
     }
 }
 
+@media only screen
+and (max-width : 420px) {
+    #rss {
+        #rss-section {
+            width: 100%;
+            margin: 0 auto;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        #result {
+            #articles {
+                #content {
+                    li {
+                        max-width: 100%;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
