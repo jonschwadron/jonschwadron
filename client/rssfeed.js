@@ -57,8 +57,8 @@ if (Meteor.isClient) {
                 var latestDate = data.dates[0];
 
                 //remove seconds from string with momentjs
-                earliestDate = moment().format('YYYY-MM-DD hh:mm');
-                latestDate = moment().format('YYYY-MM-DD hh:mm');
+                earliestDate = moment(earliestDate).format('YYYY-MM-DD hh:mm');
+                latestDate = moment(latestDate).format('YYYY-MM-DD hh:mm');
 
 
                 $('#report').append(`

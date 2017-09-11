@@ -6,6 +6,8 @@
         background-color: #FF4040;
 
         h1 {
+            font-size: 50px;
+            font-family: 'Lobster', cursive;
             color: white;
             margin-top: 0;
             text-shadow: 2px 2px rgba(0,0,0,0.5);
@@ -13,6 +15,7 @@
     }
     #link {
         #input-feed {
+            position: relative;
             width: 100%;
             height: 38px;
             border: 1px solid rgba(0,0,0,0.1);
@@ -31,10 +34,11 @@
         :-moz-placeholder {color: lightgrey;}
     
         #icon-magnifyingGlass {
-            position: relative;
-            float: left;
-            top: -26px;
-            left: 12px;
+            position: absolute;
+            z-index: 10;
+            font-size: 17px;
+            padding-top: 10px;
+            padding-left: 11px;
         }
 
         #exampleUrls {
@@ -49,19 +53,22 @@
             -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 
-            .examples {
-                text-shadow: none;
-                font-size: 12px;
-                padding: 4px;
-                line-height: 2.5;
-                color: black;
-                background-color: white;
-                border-radius: 5px;
-                cursor: pointer;
-                -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
-                -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
-                box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.4);
+            li {
+                list-style-type: none;
+                .examples {
+                    padding: 2px 4px 3px 4px;
+                    text-shadow: none;
+                    font-size: 12px;
+                    color: black;
+                    background-color: white;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
+                    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.4);
+                    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.4);
+                }
             }
+
         }
     }
 
@@ -70,21 +77,31 @@
         background-color: white;
 
         #overview {
-            padding: 50px 10px 50px 10px;
-
             h1 {
+                font-family: 'Roboto Slab', serif;
+                font-size: 50px;
+                text-align: center;
+                padding: 30px 10px 30px 10px;
                 margin-top: 0;
             }
 
+            h5 {
+                width: 100%;
+                margin: 0;
+                color: white;
+                background-color: #FF4040;
+                padding: 4px 0 3px 10px;
+            }
+
             #report {
-                padding-left: 2px;
+                padding: 10px 10px 10px 10px;
             }
         }
 
         #articles {
             padding: 10px 0 10px 0;
             
-            h3 {
+            h5 {
                 width: 100%;
                 margin: 0;
                 color: white;
@@ -105,6 +122,10 @@
                     -ms-user-select: none; /* Internet Explorer/Edge */
                     user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
     
+                    span {
+                        padding: 2px;
+                    }
+
                     #sortByDateAsc,
                     #sortByTitleAsc,
                     #sortByDescriptionAsc {

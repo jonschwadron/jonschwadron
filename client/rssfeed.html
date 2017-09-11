@@ -1,16 +1,20 @@
 <template name="RssFeed">
-  <div id="rss">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto+Slab" rel="stylesheet">
+    <div id="rss">
     <div id="rss-section">
-      <h1>RSS Feed Reader</h1>
+      <h1>Beautiful Rss</h1>
       
       <div id="link">
         <form id="input-form">
-          <input id="input-feed" type="text" name="rssInput" placeholder="paste rss link here" /><i id="icon-magnifyingGlass" class="fa fa-search" aria-hidden="true"></i>
+          <i id="icon-magnifyingGlass" class="fa fa-search" aria-hidden="true"></i>
+          <input id="input-feed" type="text" name="rssInput" placeholder="paste rss link here" />
         </form>
-        <div id="exampleUrls">or pick one of these 
-          <span class="examples">https://www.nasa.gov/rss/dyn/breaking_news.rss</span>
-          <span class="examples">http://rss.cnn.com/rss/cnn_topstories.rss</span>
-          <span class="examples">https://www.technologyreview.com/topnews.rss</span>
+        <div id="exampleUrls">
+          <ul>
+            <li><span class="examples">https://www.nasa.gov/rss/dyn/breaking_news.rss</span></li>
+            <li><span class="examples">http://rss.cnn.com/rss/cnn_topstories.rss</span></li>
+            <li><span class="examples">https://www.technologyreview.com/topnews.rss</span></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -19,11 +23,11 @@
     <div id="result">
       <div id="overview">
           <h1 id="title"></h1>
-          <h3>Overview Report</h3>
+          <h5>Overview Report</h5>
           <ul id="report"></ul>
         </div>
         <div id="articles">
-            <h3>Articles</h3>
+            <h5>Articles</h5>
             <div id="sortBox">
               <div id="sortOptions">sort by
                   <span id="sortByDateAsc" title="Sort by date in ascending order">date <i class="fa fa-caret-up" aria-hidden="true"></i></span>
