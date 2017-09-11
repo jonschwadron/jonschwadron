@@ -93,6 +93,10 @@ Router.route('/tictactoeonline', function () {
 	this.render('TicTacToeOnline');
 });
 
+Router.route('/beautiful-rss', function () {
+	this.render('BeautifulRss');
+});
+
 
 
 
