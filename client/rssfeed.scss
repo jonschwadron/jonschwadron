@@ -45,7 +45,6 @@
             color: white;
             padding-top: 5px;
             text-shadow: 1px 1px rgba(0,0,0,0.7);
-
             -webkit-touch-callout: none; /* iOS Safari */
             -webkit-user-select: none; /* Safari */
             -khtml-user-select: none; /* Konqueror HTML */
@@ -55,6 +54,8 @@
 
             li {
                 list-style-type: none;
+                line-height: 25px;
+                margin-left: 5px;
                 .examples {
                     padding: 2px 4px 3px 4px;
                     text-shadow: none;
