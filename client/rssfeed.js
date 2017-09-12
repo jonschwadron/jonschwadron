@@ -113,6 +113,9 @@ if (Meteor.isClient) {
                     pumpOutTheContentData(rssData);
                     pumpOutTheOverviewData(rssData);
                     $('#result').show();
+                    $('html, body').animate({
+                        scrollTop: $('#result').offset().top
+                    }, 750);
                 });
             } 
 
