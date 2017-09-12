@@ -14,7 +14,9 @@ if (Meteor.isClient) {
                 for(var i in data.items){
                     var item = data.items[i];
                     
-                    //shorten description to 200 characters. if middle of a word is cut off, shorten to the last whitespace in the string
+                    //shorten the description to 200 characters. if a word is cut off
+                    //shorten to the last whitespace in the string using Math.min
+                    //where it returns the smallest number as the new max character length
                     var shortDescription = item.description.substring(0, 200); 
                     shortDescription = shortDescription.substr(0, Math.min (
                         shortDescription.length, shortDescription.lastIndexOf(' ')
@@ -68,8 +70,8 @@ if (Meteor.isClient) {
                         articleImageCount++;
                     } 
                 }
-                var earliestDate = data.dates[0];
-                var latestDate = data.dates[data.dates.length - 1];
+                var earliestDate = data.dates[data.dates.length - 1];
+                var latestDate = data.dates[0];
 
                 //remove seconds from string with momentjs
                 earliestDate = moment(earliestDate).format('YYYY-MM-DD hh:mm');
