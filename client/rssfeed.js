@@ -79,10 +79,10 @@ if (Meteor.isClient) {
 
 
                 $('#report').append(`
-                    <li>Number of articles: ` + data.items.length + `</li>
-                    <li>Number of articles with images: ` + articleImageCount + `</li>
-                    <li>Earliest published date: ` + earliestDate + `</li>
-                    <li>Latest published date: ` + latestDate + `</li>
+                    <li><div class="fancyTitle">Number of articles</div><div class="fancyStats">` + data.items.length + `</div></li>
+                    <li><div class="fancyTitle">Number of articles with images</div><div class="fancyStats">` + articleImageCount + `</div></li>
+                    <li><div class="fancyTitle">Earliest published date</div><div class="fancyDates">` + earliestDate + `</div></li>
+                    <li><div class="fancyTitle">Latest published date</div><div class="fancyDates">` + latestDate + `</div></li>
                 `);
             }
 
