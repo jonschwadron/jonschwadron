@@ -29,8 +29,8 @@ Router.route('/rssfeed', function () {
 	this.render('RssFeed');
 });
 
-Router.route('/resume', function () {
-	this.render('Resume');
+Router.route('/status', function () {
+	this.render('Status');
 });
 
 Router.route('/work', function () {
@@ -130,7 +130,7 @@ if (Meteor.isClient) {
 	// 		document.body.style.backgroundColor = "white";
 	// 	}
 	// });
-	
+
 	Template.Overview.events({
 		'click #emailcopiednotify'() {
 			var email = document.getElementById("sb-email");
@@ -231,7 +231,7 @@ if (Meteor.isClient) {
 		GoogleMaps.load({ key: 'AIzaSyBO04ekYQ1HfR856AIU3HLvsljXDIGMF0c' });
 	});
 
-	Template.Resume.onRendered(function () {
+	Template.Status.onRendered(function () {
 		$(document).ready(function () {
 			var w = 600,
 				h = 600;
@@ -266,20 +266,63 @@ if (Meteor.isClient) {
 					{ axis: "Firebase", value: 0.6 },
 					{ axis: "MySQL", value: 0.5 },
 					{ axis: "Postgres", value: 0.65 },
+                    { axis: "Ruby on Rails", value: 0 },
 					{ axis: "Django", value: 0.70 },
 					{ axis: "Node.js", value: 0.65 },
 					{ axis: "PHP", value: 0.6 },
 					{ axis: "API", value: 0.65 },
 					{ axis: "Meteor", value: 0.8 },
+                    { axis: "Backbone.js", value: 0 },
+                    { axis: "Marionette.js", value: 0 },
 					{ axis: "React", value: 0.35 },
 					{ axis: "Angular 1", value: 0.6 },
 					{ axis: "jQuery", value: 0.78 },
+                    { axis: "CoffeeScript", value: 0 },
 					{ axis: "JavaScript", value: 0.85 },
-					{ axis: "CSS", value: 0.9 },
-					{ axis: "HTML", value: 0.95 },
+                    { axis: "CSS/SCSS", value: 0.95 },
+					{ axis: "HTML/HAML", value: 0.99 },
 
 				],
-				
+                [
+					{ axis: "Git", value: 0.95 },
+					{ axis: "Windows", value: 0.8 },
+					{ axis: "macOS", value: 0.9 },
+					{ axis: "Ubuntu", value: 0.8 },
+					{ axis: "Virtualization", value: 0.65 },
+					{ axis: "CDN", value: 0.55 },
+					{ axis: "WPEngine", value: 0.75 },
+					{ axis: "WooCommerce", value: 0.65 },
+					{ axis: "WordPress", value: 0.75 },
+					{ axis: "Python", value: 0.65 },
+					{ axis: "Java", value: 0.55 },
+					{ axis: "C++", value: 0.45 },
+					{ axis: "React-Native", value: 0.3 },
+					{ axis: "Android SDK", value: 0.5 },
+					{ axis: "Ansible", value: 0.33 },
+					{ axis: "Chef", value: 0.33 },
+					{ axis: "Heroku", value: 0.55 },
+					{ axis: "AWS EC2", value: 0.40 },
+					{ axis: "Firebase", value: 0.6 },
+					{ axis: "MySQL", value: 0.5 },
+					{ axis: "Postgres", value: 0.70 },
+                    { axis: "Ruby on Rails", value: 0.65 },
+					{ axis: "Django", value: 0.70 },
+					{ axis: "Node.js", value: 0.65 },
+					{ axis: "PHP", value: 0.6 },
+					{ axis: "API", value: 0.65 },
+					{ axis: "Meteor", value: 0.8 },
+                    { axis: "Backbone.js", value: 0.7 },
+                    { axis: "Marionette.js", value: 0.7 },
+					{ axis: "React", value: 0.35 },
+					{ axis: "Angular 1", value: 0.6 },
+					{ axis: "jQuery", value: 0.90 },
+                    { axis: "CoffeeScript", value: 0.95 },
+					{ axis: "JavaScript", value: 0.95 },
+					{ axis: "CSS/SCSS", value: 0.95 },
+					{ axis: "HTML/HAML", value: 0.99 },
+
+				],
+
 			];
 
 			//Options for the Radar chart, other than default
@@ -315,7 +358,7 @@ if (Meteor.isClient) {
 				.attr("fill", "#404040")
 				.text("What % of owners use a specific service in a week");
 
-			//Initiate Legend	
+			//Initiate Legend
 			var legend = svg.append("g")
 				.attr("class", "legend")
 				.attr("height", 100)
@@ -368,7 +411,7 @@ if (Meteor.isClient) {
 						.interpolate(d3.interpolateHcl)
 						.range([d3.rgb("#007AFF"), d3.rgb('#FF3F34')])
 				};
-				
+
 				if ('undefined' !== typeof options) {
 					for (var i in options) {
 						if ('undefined' !== typeof options[i]) {
