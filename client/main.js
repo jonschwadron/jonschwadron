@@ -172,7 +172,7 @@ if (Meteor.isClient) {
 	Template.Overview.onRendered(function () {
 		$(document).ready(function () {
 			//simpleweatherjs
-			loadWeather('Kansas City', ''); //@params location, woeid
+			loadWeather('Denver', ''); //@params location, woeid
 		});
 
 		function loadWeather(location, woeid) {
@@ -244,41 +244,6 @@ if (Meteor.isClient) {
 			//Data
 			var d = [
 
-				[
-					{ axis: "Git", value: 0.9 },
-					{ axis: "WPEngine", value: 0.75 },
-					{ axis: "WooCommerce", value: 0.65 },
-					{ axis: "WordPress", value: 0.75 },
-                    { axis: "Ruby", value: 0.25 },
-					{ axis: "Python", value: 0.65 },
-					{ axis: "Java", value: 0.55 },
-					{ axis: "C++", value: 0.45 },
-					{ axis: "React-Native", value: 0.3 },
-					{ axis: "Android SDK", value: 0.5 },
-					{ axis: "Ansible", value: 0.33 },
-					{ axis: "Chef", value: 0.33 },
-					{ axis: "Heroku", value: 0.55 },
-					{ axis: "AWS EC2", value: 0.40 },
-					{ axis: "Firebase", value: 0.6 },
-					{ axis: "MySQL", value: 0.5 },
-					{ axis: "Postgres", value: 0.60 },
-                    { axis: "Ruby on Rails", value: 0.25 },
-					{ axis: "Django", value: 0.65 },
-					{ axis: "Node.js", value: 0.65 },
-					{ axis: "PHP", value: 0.6 },
-					{ axis: "API", value: 0.65 },
-					{ axis: "Meteor", value: 0.7 },
-                    { axis: "Backbone.js", value: 0 },
-                    { axis: "Marionette.js", value: 0 },
-					{ axis: "React", value: 0.35 },
-					{ axis: "Angular 1", value: 0.6 },
-					{ axis: "jQuery", value: 0.78 },
-                    { axis: "CoffeeScript", value: 0 },
-					{ axis: "JavaScript", value: 0.78 },
-                    { axis: "CSS/SCSS", value: 0.80 },
-					{ axis: "HTML/HAML", value: 0.85 },
-
-				],
                 [
 					{ axis: "Git", value: 0.95 },
 					{ axis: "WPEngine", value: 0.75 },
